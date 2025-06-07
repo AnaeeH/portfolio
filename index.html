@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anaée Herbillon - portfolio</title>
+    <link rel="styleSheet" href="styleSite.css">
+</head>
+
+<body>
+    <header>
+        <div><a href="index.html">
+                <h1>Anaée <br>Herbillon </h1>
+            </a>
+
+        </div>
+
+        <label for="toggle">☰</label>
+        <input type="checkbox" id="toggle">
+
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html#presentation">Qui-suis-je ?</a></li>
+                <li><a href="index.html#projets">Mes projets</a> </li>
+                <li><a href="index.html#competences">Mes compétences</a> </li>
+                <li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=a.herbillon33@gmail.com"
+                        target="_blank" id="contact">Contactez-moi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentation">
+            <article class="imgFond">
+            </article>
+        </section>
+
+        <section>
+            <article>
+                <h2>Qui-suis-je ?</h2>
+            </article>
+            <article id="qui-suis-je">
+                <div>
+                    <img src="images/portfolio/profil.png" alt="photo de profil" id="photo">
+                </div>
+                <div class="texte">
+                    <p>Etudiante en <span>IUT informatique</span> à Bordeaux, actuellement en 1ère année.</p>
+                    <p>Je souhaite mettre mes compétences en informatique au services des causes qui ont du sens pour moi : <span>la
+                            santé</span>, l'<span>ESS</span> (l'économie sociale et solidaire),
+                        l'<span>humanitaire</span> ou bien l'<span>écologie / environnement</span>.</p>
+                    <p>Vous trouverez dans ce portfolio un aperçu de mes projets réalisés ainsi que mes compétences techniques.
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <div class="barre" id="projets">
+            <div></div>
+        </div>
+
+        <section class="fond">
+            <article>
+                <h2>Mes projets</h2>
+            </article>
+            <article>
+                <div class="texte" id="Lowatem" onclick="ouvrir(id)">
+                    <img src="images/portfolio/Lowatem.png" alt="image du jeu vidéo">
+                    <h3>Création d'un jeu vidéo</h3>
+                    <p>Réalisation d'un jeu de plateau avec règles spécifiques
+                    </p>
+                </div>
+                <div class="texte" id="FibroSphere" onclick="ouvrir(id)">
+                    <img src="images/portfolio/siteWeb.png" alt="image du site web"><br>
+                    <h3>Site Web</h3>
+                    <p> Création d'un site web sur le thème de la santé
+                    </p>
+                </div>
+                <div class="texte" id="hackathon" onclick="ouvrir(id)">
+                    <img src="images/portfolio/mainRobotisée.jpg" alt="image de la main robotisée"><br>
+                    <h3>Hackathon</h3>
+                    <p> Conception d'une main robotisée
+                    </p>
+                </div>
+                <div class="texte" id="IAcademyOfDoom" onclick="ouvrir(id)">
+                    <img src="images/portfolio/IAcademyOfDoom.png" alt="image du jeu de simulation défensive"><br>
+                    <h3>Simulation défensive</h3>
+                    <p> Développement d'un jeu de construction défensive et de simulation
+                    </p>
+                </div>
+                <div class="texte" id="VisualisationGraphe" onclick="ouvrir(id)">
+                    <img src="images/portfolio/graphe.png" alt="image de l'interface de visualisation de graphe"><br>
+                    <h3>Visualtion de graphe</h3>
+                    <p> Conception d'une interface de visualisation de graphe
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <div class="barre" id="competences"></div>
+
+        <section>
+            <article>
+                <h2>Mes compétences</h2>
+            </article>
+            <article>
+                <div>
+                    <img src="images/portfolio/langageProgrammation.jpg" alt="Image représentant le droit médical">
+                </div>
+                <div class="texte" id="langage">
+                    <p>
+                    <ul>
+                        <li>Java</li>
+                        <li>HTML / CSS</li>
+                        <li>Javascript</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Git</li>
+                    </ul>
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <div id="gris">
+            <div>
+                <button><a href="" target="_blank">Afficher le pdf</a></button>
+                <img src=" " alt="">
+            </div>
+        </div>
+
+
+        <script>
+            let fond = document.getElementById('gris')
+            const ouvrir = (id) => {
+                fond.style.display = "block";
+                document.body.classList.add("no-scroll"); // ← bloque le scroll du fond
+                let image = document.querySelector('#gris img');
+                let bouton = document.querySelector('#gris button a');
+                console.log(image)
+                image.setAttribute('src', `images/retExp/${id}.png`);
+                image.setAttribute('alt', `retour d'expérience de ${id}`);
+                bouton.setAttribute('href', `pdf/${id}.pdf`)
+
+                //Fermer l'affichage du Retour d'expérience
+                fond.addEventListener('click', (e) => {
+                    if (e.target === fond) {
+                        fond.style.display = "none";
+                        document.body.classList.remove("no-scroll"); // ← remet le scroll
+                        image.setAttribute('src', "");
+                        bouton.setAttribute('href', "");
+                    }
+                })
+            }
+        </script>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <!-- <section id="logo">
+                <img src="images/logos/Logo.png" alt="logo de l'association fibroSphère">
+            </section> -->
+            <section>
+                <h3>Suivez-moi &emsp;&emsp;- - - - - -</h3>
+                <a href="https://www.linkedin.com/in/anaee-herbillon/" target="_blank"><img
+                        src="images/logos/linkedin.png" alt="logo de linkedin"></a>
+            </section>
+            <section>
+                <div>
+                    <h3>Contactez-moi &emsp;&emsp;- - - </h3>
+                    <p>M'écrire par mail : </p>
+                    <span><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=a.herbillon33@gmail.com"
+                            target="_blank">a.herbillon33@gmail.com</a></span>
+                </div>
+            </section>
+            <!-- <section>
+                <div>
+                    <h3>Mes références &emsp;- -</h3>
+                    <ul>
+                        <li><a href="https://www.leh.fr/edition/a/paulinenicolas" target="_blank">Groupe LEH</a></li>
+                    </ul>
+
+                </div>
+            </section> -->
+            <!-- <section>
+                <div>
+                    <h3> - - - - - - - - - - - - - - - - - - - -</h3>
+                    <ul>
+                        <li><a href="mentionsLegales.html">Mentions légales</a></li>
+                        <li>Politique de confidentialité</li>
+                        <li>Gestion de cookies</li>
+                    </ul>
+                </div>
+            </section> -->
+        </div>
+        <div class="footer-credit">
+            <p> <a href="https://www.linkedin.com/in/anaee-herbillon/">Copyright © HERBILLON Anaée - Portfolio 2025</a>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>

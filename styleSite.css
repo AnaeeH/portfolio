@@ -1,0 +1,586 @@
+/* ------------ STYLE GENERAL ------------ */
+/* style de la page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    background-color: whitesmoke;
+}
+
+/* style du haut de page */
+header {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+}
+
+/* style du main */
+main {
+    margin-top: 110px;
+    font-size: 18px;
+}
+
+/* style général lien hypertextes */
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* style général lien hypertextes */
+li:not(#contact) a:hover {
+    cursor: pointer;
+    color: #2f3e5e;
+    font-weight: 600;
+}
+
+/*Style général des images*/
+img {
+    width: 100%;
+    border-radius: 0%;
+}
+
+/* style général des listes */
+li {
+    list-style: circle;
+    text-align: left;
+    padding-bottom: 0.8rem;
+}
+
+/* style du titre 1 */
+h1 {
+    color: black;
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 30px;
+    line-height: 1.8rem;
+}
+
+h1:hover {
+    color: #2f3e5e;
+    font-size: 30.5px;
+}
+
+/* style des titres 2 */
+h2 {
+    color: rgb(27, 27, 27);
+    font-size: 27px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* style des titres 2 */
+h3 {
+    color: #2f3e5e;
+}
+
+/* ------------ STYLE DU MENU / HEADER ------------ */
+/* bouton du menu déroulant sur téléphone invisible */
+header label, #toggle
+{
+    display: none;
+}
+
+/* style des div du header */
+header div {
+    margin-left: 1%;
+    margin-right: 1%;
+    display: flex;
+}
+
+/* place du menu de navigation */
+nav#menu {
+    flex-grow: 2;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* style de la liste et placement des onglets de navigation */
+nav#menu>ul {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    justify-content: center;
+}
+
+/* style des textes de la liste dans le menu */
+nav#menu li {
+    list-style: none;
+    font-size: 19px;
+    margin: 2%;
+    margin-left: 5%;
+    font-weight: 400;
+}
+
+nav#menu a {
+    color: black;
+}
+ 
+/* style pour le contact dans le menu */
+nav#menu a#contact {
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: #bac9e6;
+}
+
+/* style pour le contact dans le menu */
+nav#menu a#contact:hover {
+    background-color: #d9dee9;
+}
+
+
+/* ------------ STYLE MAIN ------------ */
+/* style de l'image de fond sur la page d'accueil */
+main article.imgFond {
+    margin: 0;
+    height: 380px;
+    background-image: url("images//pageAccueil/banniereLinkedin.png");
+}
+
+/* le style de tous les articles */
+main section article {
+    display: flex;
+    justify-content: space-around;
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+/* lorsque l'article est un texte */
+main section:not(#formulaire) article.texte {
+    flex-direction: column;
+    text-align: center;
+    margin: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* lorsque l'article est une barre */
+main div.barre {
+    margin-left: 50%;
+    height: 90px;
+    width: 2px;
+    background-color: #2f3e5e;
+}
+
+/* section avec le texte et section image */
+main section:not(#formulaire) div {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+} 
+
+/* section avec l'image */
+main section article img {
+    width: 100%;
+    border-radius: 30px;
+}
+
+main section article#qui-suis-je div:first-child {
+    align-items: center;
+}
+
+main section article#qui-suis-je div+div{
+    display: flex;
+    flex-grow: 2;
+}
+
+/* section avec la photo */
+main section article img#photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 40px;
+}
+
+/* section avec le texte */
+main section div.texte {
+    text-align: justify;
+    flex-direction: column;
+    align-content: center;
+}
+
+/* le style du span dans le texte */
+main section .texte span {
+    color: #5b6e93;
+    font-weight: 600;
+}
+
+/* style des textes avec fond */
+.fond div.texte {
+    background-color: rgb(231, 231, 231);
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;   
+    margin: 12px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* style des sections entier */
+.fondEntier {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #d7e2e9;
+    opacity: 89;
+    text-align: center;
+}
+
+/* style des textes avec fond lorsque la souris passe sur un pavé */
+.fond div.texte:hover {
+    cursor: pointer;
+    background-color: #d9dee9; 
+}
+
+/* style de la section article*/
+main section#chiffres article {
+    text-align: center;
+}
+
+/* style de la section article*/
+main section#chiffres article p{
+    font-size: 25px;
+    text-align: center;
+}
+
+/* style de l'article temoignage */
+main article.temoignage div{
+    position: relative;
+}
+
+/* style de l'image de la section article */
+main article.temoignage img{
+    position: absolute;
+    background-color: rgb(231, 231, 231);
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    bottom: -50px;
+    left: -75px;
+}
+
+/* taille de l'écriture dans le domaine d'intervention */
+main div#langage {
+    padding-left: 30px;
+    font-size: 22px;
+}
+
+/* ------------ STYLE MES PROJETS ------------ */
+/*Revenir à la ligne"*/
+section.fond article {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Taille*/
+section.fond article .texte {
+    max-width: 300px;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+}
+
+
+section.fond .texte {
+    position: relative;
+}
+
+section.fond .texte div {
+    position: absolute;
+    top: -25px;
+    left: 80px;
+    padding: 15px 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 40px;
+    background-color: #bac9e6;
+}
+
+
+/*Affichage lors du clique*/
+div#gris {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100;
+    display: none;
+    overflow-y: auto;
+}
+
+div#gris div {
+    position: relative;
+    max-width: 900px;
+    margin: 5rem auto;
+    z-index: 101;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+}
+
+div#gris img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+div#gris div button {
+    position: fixed;
+    top: 2px;
+    left: 44%;
+    background-color: #bac9e6;
+    border-radius: 40px;    
+    font-size: 20px;
+    font-weight: 500;
+    padding: 20px 5px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    border:none;
+    box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+}
+
+div#gris div button:hover {
+    background-color: #d9dee9;
+    color: #2f3e5e; 
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+
+/* ------------ STYLE DU FOOTER ------------ */
+/* style du footer */
+footer {
+    margin-top: 5%;
+    background-color: #d8d8d8;
+}
+
+footer .footer-content {
+    display: flex;
+}
+
+/* positionnement des sections dans le footer */
+footer section {
+    flex-grow: 2;
+    margin: 2%;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+footer > div.footer-credit {
+    text-align: center;
+    font-size: 14px;
+    padding: 1em;
+    padding-top: 0px;
+}
+
+.footer-credit p {
+    margin-top: 0px;
+}
+
+
+
+
+/* taille de l'image dans le footer */
+footer img {
+    width: 40px;    
+}
+
+/* taille des logos dans le footer */
+footer #logo img{
+    width: 200px;
+}
+
+/* style du span */
+footer p+span {
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* taille des images présentes dans le span */
+footer span img {
+    width: 14px;    
+}
+
+/* pas d'indentation sur les listes */ 
+footer ul {
+    padding-left: 0;
+}
+/* style des listes du footer */
+footer li {
+    list-style: none;
+}
+
+/* style lorsque les elements des listes ou les span sont touchés*/
+footer li:hover, footer span:hover {
+    cursor: pointer;
+    font-weight: 600;
+    color: #00536a;
+}
+
+
+
+/* ------------ STYLE DU RESPONSIVE ------------ */
+/*               format téléphone                */
+@media screen and (max-width: 900px) {
+
+    /* marge du texte */ 
+    main section:not(#formulaire) article.texte {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    /* la position des articles */
+    main section article {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* la position des div */
+    main section:not(#formulaire) div {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* la taille des div texte */
+    main section:not(#formulaire) article div.texte {
+        width: 100%;
+        display: flex;
+    }
+
+    /* la taille des div texte */
+    main section:not(#formulaire) div.texte img {
+        justify-content: center;
+    }
+
+    /* la taille des div texte */
+    main section:not(#formulaire).fond {
+        margin-right: 10%;
+    }
+
+    /* la marge du main */
+    main {
+        margin-top: 65px;
+    }
+
+    /* l'image de fond pour taille téléphone */
+    main article.imgFond {
+        height: 300px;
+        background-image: url("images/pageAccueil/banniereLinkedinResponsive.png");
+    }
+
+    /* taille du titre présent au dessus de l'image */
+    main article.imgFond h2{
+        font-size: 30px;
+        padding: 60px;
+    }
+
+    /* taille et position des images des témoignages */
+    main article.temoignage img{
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        bottom: -50px;
+        left: -20px;
+    }
+
+    /* ------------ FOOTER responsive ------------ */
+    /* style du footer */
+    footer .footer-content {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        text-align: center;
+    }
+
+    /* disparition du logo dans le footer style téléphone */
+    footer #logo {
+        display: none;
+    }
+
+    /* disparition du logo dans le footer style téléphone */
+    footer div li, a {
+        text-align: center;
+    }
+
+    /* ------------ HEADER responsive ------------ */
+    /* la taille et la marge du titre */
+    h1 {
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    /* la taille du span dans le titre */
+    h1 span {
+        font-size: 15px;
+    }
+
+    /* la taille du logo */
+    header div img {
+        width: 80px;
+    }
+    
+    /* le style du bouton pour la barre de menu */
+    header label {
+        width: 40px;
+        display: flex;
+        margin-left: 15px;
+        padding: 2px;
+        font-size: 45px;
+        color: #2f3e5e;
+        cursor: pointer;
+    }
+
+    /* réapparition du menu lorsqu'on clique sur la barre de menu */
+    #toggle:checked + nav {
+        display: flex;
+        right: -5px;
+        translate: 195;
+    }
+
+    /* style du menu en format téléphone */
+    header nav{
+        position: absolute;
+        z-index: 1;
+        right: -310px;
+        width: 300px;
+        display: flex;
+        background-color: whitesmoke;
+        flex-direction: column;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        transition: 0.5s;
+    }
+
+    /* position de la liste en colonne */
+    header ul {
+        flex-direction: column;   
+        padding: 10px;
+    }
+
+    /* style pour le contact dans le menu */
+    nav#menu a#contact {
+        text-align: center;
+        font-weight: 600;
+        padding: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        background-color: whitesmoke;
+    }
+
+    /* style pour le contact dans le menu */
+    nav#menu a#contact:hover {
+        background-color: whitesmoke;
+    }
+
+}

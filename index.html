@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anaée Herbillon - portfolio</title>
     <link rel="styleSheet" href="styleSite.css">
+    <link rel="icon" href="images/pageAccueil/logoSite.png" type="image/x-icon">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
         <label for="toggle">☰</label>
         <input type="checkbox" id="toggle">
 
-        <nav id="menu">
+        <nav id="menu" role="navigation">
             <ul>
                 <li><a href="index.html#presentation">Qui-suis-je ?</a></li>
                 <li><a href="index.html#projets">Mes projets</a> </li>
@@ -30,7 +31,7 @@
         </nav>
     </header>
 
-    <main>
+    <main role="main">
         <section id="presentation">
             <article class="imgFond">
             </article>
@@ -42,7 +43,7 @@
             </article>
             <article id="qui-suis-je">
                 <div>
-                    <img src="images/portfolio/profil.png" alt="photo de profil" id="photo">
+                    <img src="images/portfolio/profil.png" alt="Photo de Anaée Herbillon, étudiante en informatique à Bordeaux" id="photo">
                 </div>
                 <div class="texte">
                     <p>Etudiante en <span>IUT informatique</span> à Bordeaux, actuellement en 2ème année.</p>
@@ -61,28 +62,29 @@
 
         <section class="fond">
             <h2>Mes projets</h2>
+
             <h3>Projets à l'IUT</h3>
             <article>
                 <div class="texte" id="Lowatem" onclick="ouvrir(id)">
-                    <img src="images/portfolio/Lowatem.png" alt="image du jeu vidéo">
+                    <img src="images/portfolio/Lowatem.png" alt="Aperçu du jeu Lowatem, plateau avec jetons et cases">
                     <h3>Création d'un jeu vidéo</h3>
                     <p>Réalisation d'un jeu de plateau avec règles spécifiques
                     </p>
                 </div>
                 <div class="texte" id="FibroSphere" onclick="ouvrir(id)">
-                    <img src="images/portfolio/siteWeb.png" alt="image du site web"><br>
+                    <img src="images/portfolio/siteWeb.png" alt="Design du site Web sur le thème de la santé"><br>
                     <h3>Site Web</h3>
                     <p> Création d'un site web sur le thème de la santé
                     </p>
                 </div>
                 <div class="texte" id="IAcademyOfDoom" onclick="ouvrir(id)">
-                    <img src="images/portfolio/IAcademyOfDoom.png" alt="image du jeu de simulation défensive"><br>
+                    <img src="images/portfolio/IAcademyOfDoom.png" alt="Interface du jeu de simulation défensive"><br>
                     <h3>Simulation défensive</h3>
                     <p> Développement d'un jeu de construction défensive et de simulation
                     </p>
                 </div>
                 <div class="texte" id="VisualisationGraphe" onclick="ouvrir(id)">
-                    <img src="images/portfolio/graphe.png" alt="image de l'interface de visualisation de graphe"><br>
+                    <img src="images/portfolio/graphe.png" alt="Interface de visualisation de graphe réalisée en projet d'IUT"><br>
                     <h3>Visualtion de graphe</h3>
                     <p> Conception d'une interface de visualisation de graphe
                     </p>
@@ -98,13 +100,13 @@
             <h3>Hackathon - DU Santé</h3>
             <article>
                 <div class="texte" id="Hackathon_s1" onclick="ouvrir(id)">
-                    <img src="images/portfolio/mainRobotisée.jpg" alt="image de la main robotisée"><br>
+                    <img src="images/portfolio/mainRobotisée.jpg" alt="Résultat de la main robotisée finale"><br>
                     <h3>Hackathon S1</h3>
                     <p> Conception d'une main robotisée
                     </p>
                 </div> 
                 <div class="texte" id="Hackathon_s2" onclick="ouvrir(id)">
-                    <img src="images/portfolio/hackathon_s2.jpg" alt="image du hackthon du semestre 2"><br>
+                    <img src="images/portfolio/hackathon_s2.jpg" alt="Aperçu du boitier permettant de détecter la fumée de cigarette"><br>
                     <h3>Hackathon S2</h3>
                     <p> Conception d'un boitier détecteur de fumée
                     </p>
@@ -114,7 +116,7 @@
             <h3>Projets personnels</h3>
             <article> 
                 <div class="texte" id="Woofing_Angleterre" onclick="ouvrir(id)">
-                    <img src="images/portfolio/woofing_angleterre.jpg" alt="image de la maison du woofing en angleterre"><br>
+                    <img src="images/portfolio/woofing_angleterre.jpg" alt="Photo de la ferme qui m'a accueilli pour le Woofing"><br>
                     <h3>Woofing - Angleterre</h3>
                     <p> Découverte de l'agriculture paysanne et durable
                     </p>
@@ -130,7 +132,7 @@
             <h3>Compétences informatiques</h3>
             <article>
                 <div>
-                    <img src="images/portfolio/langageProgrammation.jpg" alt="Image représentant le droit médical">
+                    <img src="images/portfolio/langageProgrammation.jpg" alt="">
                 </div>
                 <div class="texte" id="langage">
                     <p>
@@ -148,7 +150,7 @@
 
             <h3>Autres Compétences</h3>
             <article>
-                
+
             </article>
         </section>
 
@@ -185,7 +187,7 @@
         </script>
     </main>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-content">
             <!-- <section id="logo">
                 <img src="images/logos/Logo.png" alt="logo de l'association fibroSphère">

@@ -79,11 +79,6 @@ h3 {
     color: #2f3e5e;
 }
 
-#projets h3 + div {
-    clear: both;
-    margin-top: 1em; /* optionnel : espace entre le titre et le contenu */
-}
-
 /* ------------ STYLE DU MENU / HEADER ------------ */
 /* bouton du menu déroulant sur téléphone invisible */
 header label, #toggle
@@ -243,7 +238,11 @@ main section .texte span {
 .fond div.texte:hover {
     cursor: pointer;
     background-color: #d9dee9; 
+    transform: scale(1.02);
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
+
 
 /* style de la section article*/
 main section#chiffres article {

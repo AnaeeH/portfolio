@@ -75,7 +75,13 @@ h2 {
 
 /* style des titres 2 */
 h3 {
+    text-align: center;
     color: #2f3e5e;
+}
+
+#projets h3 + div {
+    clear: both;
+    margin-top: 1em; /* optionnel : espace entre le titre et le contenu */
 }
 
 /* ------------ STYLE DU MENU / HEADER ------------ */
@@ -164,7 +170,8 @@ main section:not(#formulaire) article.texte {
 /* lorsque l'article est une barre */
 main div.barre {
     margin-left: 50%;
-    height: 90px;
+    margin-bottom: 40px;
+    height: 100px;
     width: 2px;
     background-color: #2f3e5e;
 }

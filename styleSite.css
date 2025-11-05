@@ -122,7 +122,7 @@ nav#menu a {
 }
  
 /* style pour le contact dans le menu */
-nav#menu a#contact {
+nav#menu a#contact, #CV {
     padding: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -131,7 +131,7 @@ nav#menu a#contact {
 }
 
 /* style pour le contact dans le menu */
-nav#menu a#contact:hover {
+nav#menu a#contact:hover, #CV:hover {
     background-color: #d9dee9;
 }
 
@@ -277,6 +277,28 @@ main div#langage {
     font-size: 22px;
 }
 
+.tags {
+    margin-top: 8px;
+    display: flex;     
+    flex-direction: row;     
+    justify-content: center; 
+    flex-wrap: wrap;         
+    gap: 5px;   
+    width: 100%;     
+}
+
+.tags span {
+    display: flex;     
+    align-items: center;      
+    justify-content: center; 
+    background-color: #bac9e6;
+    color: #333;
+    padding: 5px 12px;    
+    border-radius: 12px;
+    font-size: 0.85em;
+}
+
+
 /* ------------ STYLE MES PROJETS ------------ */
 /*Revenir à la ligne"*/
 section.fond article {
@@ -295,7 +317,7 @@ section.fond .texte {
     position: relative;
 }
 
-section.fond .texte div {
+/* section.fond .texte div {
     position: absolute;
     top: -25px;
     left: 80px;
@@ -304,7 +326,7 @@ section.fond .texte div {
     margin-bottom: 20px;
     border-radius: 40px;
     background-color: #bac9e6;
-}
+} */
 
 
 /*Affichage lors du clique*/
@@ -575,7 +597,7 @@ footer li:hover, footer span:hover {
     }
 
     /* style pour le contact dans le menu */
-    nav#menu a#contact {
+    nav#menu a#contact, #CV {
         text-align: center;
         font-weight: 600;
         padding: 0px;
@@ -585,7 +607,7 @@ footer li:hover, footer span:hover {
     }
 
     /* style pour le contact dans le menu */
-    nav#menu a#contact:hover {
+    nav#menu a#contact:hover, #CV:hover {
         background-color: whitesmoke;
     }
 

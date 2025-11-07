@@ -1,21 +1,30 @@
 /* ------------ STYLE GENERAL ------------ */
+:root {
+  --bleu: #2f3e5e;
+  --bleu-clair: #bac9e6;
+  --bleu-clair-hover: #d9dee9;
+  --gris-block : rgb(231, 231, 231);
+  --gris-fond: whitesmoke;
+  --ombre: 0 0 1rem rgba(0,0,0,0.3);
+}
+
 /* style de la page */
 body {
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
-    background-color: whitesmoke;
+    background-color: var(--gris-fond);
 }
 
 /* style du haut de page */
 header {
-    z-index: 2;
+    z-index: 100;
     position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: whitesmoke;
+    background-color: var(--gris-fond);
     box-shadow: 0 0 1rem rgba(0,0,0,0.3);
 }
 
@@ -34,7 +43,7 @@ a {
 /* style général lien hypertextes */
 li:not(#contact) a:hover {
     cursor: pointer;
-    color: #2f3e5e;
+    color: var(--bleu);
     font-weight: 600;
 }
 
@@ -61,7 +70,7 @@ h1 {
 }
 
 h1:hover {
-    color: #2f3e5e;
+    color: var(--bleu);
     font-size: 30.5px;
 }
 
@@ -76,7 +85,7 @@ h2 {
 /* style des titres 2 */
 h3 {
     text-align: center;
-    color: #2f3e5e;
+    color: var(--bleu);
 }
 
 /* ------------ STYLE DU MENU / HEADER ------------ */
@@ -96,8 +105,7 @@ header div {
 /* place du menu de navigation */
 nav#menu {
     flex-grow: 2;
-    margin-left: 1%;
-    margin-right: 1%;
+    margin: 0 1%;
 }
 
 /* style de la liste et placement des onglets de navigation */
@@ -127,12 +135,12 @@ nav#menu a#contact, #CV {
     margin-top: 10px;
     margin-bottom: 20px;
     border-radius: 40px;
-    background-color: #bac9e6;
+    background-color: var(--bleu-clair);
 }
 
 /* style pour le contact dans le menu */
 nav#menu a#contact:hover, #CV:hover {
-    background-color: #d9dee9;
+    background-color: var(--bleu-clair-hover);
 }
 
 
@@ -149,17 +157,14 @@ main section article {
     display: flex;
     justify-content: space-around;
     margin: 2%;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin: 0 15%;
 }
 
 /* lorsque l'article est un texte */
 main section:not(#formulaire) article.texte {
     flex-direction: column;
     text-align: center;
-    margin: 1%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 1% 10%;
 }
 
 /* lorsque l'article est une barre */
@@ -168,7 +173,7 @@ main div.barre {
     margin-bottom: 40px;
     height: 100px;
     width: 2px;
-    background-color: #2f3e5e;
+    background-color: var(--bleu);
 }
 
 /* section avec le texte et section image */
@@ -215,7 +220,7 @@ main section .texte span {
 
 /* style des textes avec fond */
 .fond div.texte {
-    background-color: rgb(231, 231, 231);
+    background-color: var(--gris-block);
     border-top-left-radius: 30px;
     border-bottom-right-radius: 30px;   
     margin: 12px;
@@ -227,8 +232,7 @@ main section .texte span {
 .fondEntier {
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     background-color: #d7e2e9;
     opacity: 89;
     text-align: center;
@@ -237,7 +241,7 @@ main section .texte span {
 /* style des textes avec fond lorsque la souris passe sur un pavé */
 .fond div.texte:hover {
     cursor: pointer;
-    background-color: #d9dee9; 
+    background-color: var(--bleu-clair-hover); 
     transform: scale(1.02);
     transition: 0.3s ease;
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
@@ -263,7 +267,7 @@ main article.temoignage div{
 /* style de l'image de la section article */
 main article.temoignage img{
     position: absolute;
-    background-color: rgb(231, 231, 231);
+    background-color: var(--gris-block);
     width: 130px;
     height: 130px;
     border-radius: 100%;
@@ -291,7 +295,7 @@ main div#langage {
     display: flex;     
     align-items: center;      
     justify-content: center; 
-    background-color: #bac9e6;
+    background-color:  var(--bleu-clair);
     color: #333;
     padding: 5px 12px;    
     border-radius: 12px;
@@ -337,7 +341,7 @@ div#gris {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7); 
-    z-index: 100;
+    z-index: 510;
     display: none;
     overflow-y: auto;
 }
@@ -346,7 +350,7 @@ div#gris div {
     position: relative;
     max-width: 900px;
     margin: 5rem auto;
-    z-index: 101;
+    z-index: 501;
     box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
 }
 
@@ -361,7 +365,7 @@ div#gris div button {
     position: fixed;
     top: 2px;
     left: 44%;
-    background-color: #bac9e6;
+    background-color: var(--bleu-clair);
     border-radius: 40px;    
     font-size: 20px;
     font-weight: 500;
@@ -375,8 +379,8 @@ div#gris div button {
 }
 
 div#gris div button:hover {
-    background-color: #d9dee9;
-    color: #2f3e5e; 
+    background-color: var(--bleu-clair-hover);
+    color: var(--bleu); 
 }
 
 body.no-scroll {
@@ -454,6 +458,121 @@ footer li:hover, footer span:hover {
     color: #00536a;
 }
 
+
+/* ------------ STYLE DES COMPETENCES ------------ */
+.competences {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;        
+    flex-wrap: wrap;               
+    max-width: 900px;
+    margin: 20px auto;
+    color: #333;
+    gap: 20px;                    
+}
+
+/* Bloc de compétences */
+.competence-block {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 250px;               
+    padding: 15px 20px;
+    background-color: var(--gris-block);     
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.competence-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.competence-block p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: var(--bleu);
+}
+
+.competence-block ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.competence-block li {
+    margin-bottom: 5px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    transition: all 0.2s ease;  
+}
+
+.competence-block li:hover {
+    transform: translateX(5px); 
+    cursor: pointer;
+}
+
+
+/* ------------ STYLE DU FILTRE ------------ */
+#filtre-container {
+  position: relative;
+  display: flex;
+  justify-content: center;   
+  align-items: flex-start;   
+  flex-wrap: wrap;          
+  gap: 10px;                
+  margin: 40px auto;      
+  max-width: 700px;         
+  text-align: center;
+}
+
+#filtre-input,
+#filtre-select {
+  padding: 10px 15px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+#filtre-input {
+  width: 55%;
+  max-width: 400px;
+}
+
+#filtre-select {
+  width: 25%;
+  max-width: 200px;
+}
+
+/* --- Autocomplétion --- */
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+  /* ajustement dynamique */
+  max-height: 300px; /* hauteur maximale avant scroll */
+  overflow-y: auto;  /* barre de défilement si trop de suggestions */
+}
+
+.suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #eee;
+}
 
 
 /* ------------ STYLE DU RESPONSIVE ------------ */
@@ -564,7 +683,7 @@ footer li:hover, footer span:hover {
         margin-left: 15px;
         padding: 2px;
         font-size: 45px;
-        color: #2f3e5e;
+        color: var(--bleu);
         cursor: pointer;
     }
 

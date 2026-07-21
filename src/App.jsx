@@ -11,7 +11,7 @@ export default function App() {
       <Header />
       <main className="flex-1 pt-16">
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/portfolio/" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

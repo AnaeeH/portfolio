@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { asset } from '../utils/asset';
 
 export default function NotFoundPage() {
   return (
@@ -8,7 +9,7 @@ export default function NotFoundPage() {
       <p className="mb-8 text-neutral-700">
         La page que tu cherches n'existe pas ou a été déplacée.
       </p>
-      <Link to="/" className="btn-primary">
+      <Link to={asset('/')} className="btn-primary">
         Retour à l'accueil
       </Link>
     </div>

@@ -23,6 +23,8 @@
 </footer> 
 */}
 
+import { asset } from '../utils/asset';
+
 const EMAIL = 'a.herbillon33@gmail.com';
 const GMAIL_COMPOSE_URL = `https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=${EMAIL}`;
 const LINKEDIN_URL = 'https://www.linkedin.com/in/anaee-herbillon/';
@@ -41,7 +43,7 @@ export default function Footer() {
                         aria-label="Profil LinkedIn"
                     >
                         <img
-                            src="./images/logos/linkedin.png"
+                            src={asset('/images/logos/linkedin.png')}
                             alt="Logo LinkedIn"
                             className="w-10"
                         />

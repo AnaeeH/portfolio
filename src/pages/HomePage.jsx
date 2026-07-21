@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import About from '../components/About';
 import ProjectsSection from '../components/ProjectsSection';
 import Skills from '../components/Skills';
+import { asset } from '../utils/asset';
 
 export default function HomePage() {
   const location = useLocation();
@@ -24,7 +25,7 @@ export default function HomePage() {
        <section id="presentation">
         <div
           className="h-72 w-full bg-cover bg-center md:h-96"
-          style={{ backgroundImage: "url('./images/pageAccueil/banniereLinkedin.png')" }}
+          style={{   backgroundImage: `url(${asset('/images/pageAccueil/banniereLinkedin.png')})`, }}
           role="img"
           aria-label="Bannière personnelle"
         />

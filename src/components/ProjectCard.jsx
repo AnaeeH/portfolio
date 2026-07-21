@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { asset } from '../utils/asset';
 
 /**
  * Clickable project card. Clicking navigates to /projets/:id (no more direct PDF popup).
@@ -6,13 +7,13 @@ import { Link } from 'react-router-dom';
 export default function ProjectCard({ project }) {
   return (
     <Link
-      to={`/projets/${project.id}`}
+      to={asset(`/projets/${project.id}`)}
       className="group flex w-full max-w-xs flex-col overflow-hidden rounded-tl-3xl rounded-br-3xl bg-surface-block p-5 shadow-card transition-all duration-300 hover:scale-[1.02] hover:bg-sky-hover hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2"
       aria-label={`Voir le projet ${project.title}`}
     >
       {project.image ? (
         <img
-          src={project.image}
+          src={asset(project.image)}
           alt={project.imageAlt || project.title}
           className="mb-4 aspect-video w-full rounded-lg object-cover"
           loading="lazy"

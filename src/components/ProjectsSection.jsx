@@ -7,14 +7,18 @@ import FilterBar from './FilterBar';
 // Extend this list to add new filters.
 const FILTER_OPTIONS = [
   { value: 'all', label: 'Tous les projets' },
-  { value: 'annee1', label: 'annee1' },
+  { value: '1ère année', label: '1ère année' },
   { value: '2ème année', label: '2ème année' },
+  { value: '3ème année', label: '3ème année' },
+   { value: 'web', label: 'web' },
   { value: 'Java', label: 'Java' },
+  { value: 'PHP', label: 'PHP' },
   { value: 'C#', label: 'C#' },
   { value: 'SQL', label: 'SQL' },
   { value: 'Python', label: 'Python' },
   { value: 'HTML / CSS', label: 'HTML / CSS' },
   { value: 'Arduino', label: 'Arduino' },
+  { value: 'Framework', label: 'Framework' },
 ];
 
 export default function ProjectsSection() {

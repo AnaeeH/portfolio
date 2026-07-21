@@ -2,8 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
-// import ProjectPage from './pages/ProjectPage';
+import ProjectPage from './pages/ProjectPage';
 import NotFoundPage from './pages/NotFoundPage';
+import { asset } from './utils/asset';
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
       <Header />
       <main className="flex-1 pt-16">
         <Routes>
-          <Route path="/portfolio/" element={<HomePage />} />
+          <Route path={asset('/')} element={<HomePage />} />
+          <Route path={asset('/projets/:projectId')} element={<ProjectPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

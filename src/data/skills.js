@@ -31,6 +31,8 @@ export const SKILLS_TECH = [
 ];
 
 export const SKILLS_OTHER = [
-  'Gestion de projets',
+  'Gestion de projets : méthode agile',
+  'Travail en équipe',
+  'Autonomie',
   'Automatisation : GRAFCET / LADDER',
 ];

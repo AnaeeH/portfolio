@@ -23,6 +23,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { asset } from '../utils/asset';
 
 const NAV_LINKS = [
   { label: 'Qui suis-je ?', anchor: 'presentation' },
@@ -52,7 +53,7 @@ export default function Header() {
     <header className="fixed top-0 z-50 w-full bg-surface-bg shadow-header">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         <Link
-          to="/"
+          to={asset('/')}
           onClick={closeMenu}
           className="transition-colors hover:text-navy"
           aria-label="Accueil"

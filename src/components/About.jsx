@@ -21,6 +21,8 @@
 </section> 
 */}
 
+import { asset } from '../utils/asset';
+
 function Highlight({ children }) {
     return <span className="font-semibold text-navy-soft">{children}</span>;
 }
@@ -33,7 +35,7 @@ export default function About() {
             <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 md:flex-row">
                 <div className="w-full md:w-1/2">
                     <img
-                        src="./images/portfolio/langageProgrammation.jpg"
+                        src={asset('/images/portfolio/langageProgrammation.jpg')}
                         alt="Illustration de langages de programmation"
                         className="w-full rounded-3xl object-cover shadow-card"
                     />
@@ -55,7 +57,7 @@ export default function About() {
                     </p>
 
                     <a
-                        href="/pdf/CV_AnaeeHERBILLON.pdf"
+                        href={asset('/pdf/CV_AnaeeHERBILLON.pdf')}
                         download="CV_AnaeeHERBILLON.pdf"
                         target="_blank"
                         rel="noopener noreferrer"

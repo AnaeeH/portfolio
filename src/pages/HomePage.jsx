@@ -24,7 +24,7 @@ export default function HomePage() {
        <section id="presentation">
         <div
           className="h-72 w-full bg-cover bg-center md:h-96"
-          style={{ backgroundImage: "url('/images/pageAccueil/banniereLinkedin.png')" }}
+          style={{ backgroundImage: "url('./images/pageAccueil/banniereLinkedin.png')" }}
           role="img"
           aria-label="Bannière personnelle"
         />

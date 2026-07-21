@@ -41,7 +41,7 @@ export default function Footer() {
                         aria-label="Profil LinkedIn"
                     >
                         <img
-                            src="/images/logos/linkedin.png"
+                            src="./images/logos/linkedin.png"
                             alt="Logo LinkedIn"
                             className="w-10"
                         />

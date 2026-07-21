@@ -37,7 +37,7 @@ export default function Skills() {
       <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 md:flex-row">
         <div className="w-full md:w-1/2">
           <img
-            src="/images/portfolio/langageProgrammation.jpg"
+            src="./images/portfolio/langageProgrammation.jpg"
             alt="Illustration compétences"
             className="w-full rounded-3xl object-cover shadow-card"
           />

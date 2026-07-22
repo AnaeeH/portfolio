@@ -1,45 +1,66 @@
 import { Link } from 'react-router-dom';
 import { asset } from '../utils/asset';
 
+const YEAR_TAG_REGEX = /^\d+(er|ère|ème|e)?\s+année$/i;
+
 /**
  * Clickable project card. Clicking navigates to /projets/:id (no more direct PDF popup).
  */
 export default function ProjectCard({ project }) {
+  const yearTag = project.tags.find((tag) => YEAR_TAG_REGEX.test(tag));
+  const otherTags = project.tags.filter((tag) => !YEAR_TAG_REGEX.test(tag));
+
   return (
     <Link
       to={asset(`/projets/${project.id}`)}
-      className="group flex w-full max-w-xs flex-col overflow-hidden rounded-tl-3xl rounded-br-3xl bg-surface-block p-5 shadow-card transition-all duration-300 hover:scale-[1.02] hover:bg-sky-hover hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2"
+      className="group flex w-full flex-col overflow-hidden rounded-2xl bg-surface-block transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2"
       aria-label={`Voir le projet ${project.title}`}
     >
-      {project.image ? (
-        <img
-          src={asset(project.image)}
-          alt={project.imageAlt || project.title}
-          className="mb-4 aspect-video w-full rounded-lg object-cover"
-          loading="lazy"
-        />
-      ) : (
-        <div
-          className="mb-4 flex aspect-video w-full items-center justify-center rounded-lg bg-neutral-200 text-neutral-500"
-          aria-hidden="true"
-        >
-          <span className="text-sm">Aperçu à venir</span>
-        </div>
-      )}
+      <div className="relative">
+        {project.image ? (
+          <div className="aspect-video w-full overflow-hidden">
+            <img
+              src={asset(project.image)}
+              alt={project.imageAlt || project.title}
+              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+              loading="lazy"
+            />
+          </div>
+        ) : (
+          <div
+            className="flex aspect-video w-full items-center justify-center bg-neutral-200 text-neutral-500"
+            aria-hidden="true"
+          >
+            <span className="text-sm">Aperçu à venir</span>
+          </div>
+        )}
 
-      <h4 className="mb-2 text-center text-lg font-semibold text-navy">
-        {project.title}
-      </h4>
-      <p className="mb-4 flex-1 text-center text-sm text-neutral-700">
-        {project.shortDescription}
-      </p>
-
-      <div className="flex flex-wrap justify-center gap-2">
-        {project.tags.map((tag) => (
-          <span key={tag} className="tag-pill">
-            {tag}
+        {yearTag && (
+          <span className="absolute right-3 top-3 rounded-full bg-navy/90 px-3 py-1 text-xs font-medium text-white shadow-sm backdrop-blur-sm">
+            {yearTag}
           </span>
-        ))}
+        )}
+      </div>
+
+      <div className="flex flex-1 flex-col p-6 text-center">
+        <h4 className="mb-3 text-xl font-semibold text-navy">
+          {project.title}
+        </h4>
+        <p className="mb-5 flex-1 text-sm leading-relaxed text-neutral-700">
+          {project.shortDescription}
+        </p>
+
+        <div className="flex flex-wrap gap-2">
+          {otherTags.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2">
+              {otherTags.map((tag) => (
+                <span key={tag} className="tag-pill">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </Link>
   );

@@ -29,29 +29,29 @@ function Highlight({ children }) {
 
 export default function About() {
     return (
-        <section className="px-4 py-16">
+        <section className="mx-auto max-w-5xl px-4 py-16">
             <h2 className="section-title">Qui suis-je ?</h2>
 
-            <div className="mx-auto flex max-w-5xl flex-col items-center gap-10 md:flex-row">
-                <div className="w-full md:w-1/2">
+            <div className="flex flex-col items-center gap-12 md:flex-row">
+                <div className="w-full md:w-2/5">
                     <img
                         src={asset('/images/portfolio/langageProgrammation.jpg')}
                         alt="Illustration de langages de programmation"
-                        className="w-full rounded-3xl object-cover shadow-card"
+                        className="w-full rounded-2xl object-cover"
                     />
                 </div>
 
-                <div className="w-full text-justify md:w-1/2">
-                    <p className="mb-4">
+                <div className="w-full text-justify md:w-3/5">
+                    <p className="mb-4 leading-relaxed text-neutral-800">
                         Étudiante en <Highlight>IUT informatique</Highlight> à Bordeaux, actuellement en 2ème année.
                     </p>
-                    <p className="mb-4">
+                    <p className="mb-4 leading-relaxed text-neutral-800">
                         Je souhaite mettre mes compétences en informatique au service des causes qui ont
                         du sens pour moi : <Highlight>la santé</Highlight>, <Highlight>l'ESS</Highlight>{' '}
                         (l'économie sociale et solidaire), <Highlight>l'humanitaire</Highlight> ou bien{' '}
                         <Highlight>l'écologie / environnement</Highlight>.
                     </p>
-                    <p className="mb-6">
+                    <p className="mb-6 leading-relaxed text-neutral-800">
                         Vous trouverez dans ce portfolio un aperçu de mes projets réalisés ainsi que mes
                         compétences techniques.
                     </p>

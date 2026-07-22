@@ -288,7 +288,7 @@ export const PROJECTS = [
     shortDescription: "Conception d'un boîtier détecteur de fumée",
     image: '/images/portfolio/hackathon_s2.jpg',
     imageAlt: 'Aperçu du boîtier permettant de détecter la fumée de cigarette',
-    tags: ['Arduino', 'Automatisation', 'Capteur'],
+    tags: ['Arduino', 'Automatisation', 'Capteur', '1ère année'],
     category: 'hackathon',
     pdfUrl: '/pdf/Hackathon_s2.pdf',
     role: 'Projet en groupe de 3 \n GEII, MP et Informatique',
@@ -319,7 +319,7 @@ export const PROJECTS = [
     shortDescription: "Conception d'une main robotisée",
     image: '/images/portfolio/mainRobotisée.jpg',
     imageAlt: 'Résultat de la main robotisée finale',
-    tags: ['Arduino', '3D', 'Capteur'],
+    tags: ['Arduino', '3D', 'Capteur', '1ère année'],
     category: 'hackathon',
     pdfUrl: '/pdf/Hackathon_s1.pdf',
     role: 'Projet séparé en 2 groupe : ' +

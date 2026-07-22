@@ -11,6 +11,10 @@
     @apply bg-surface-bg font-sans text-neutral-900;
   }
 
+  section[id] {
+    scroll-margin-top: 2rem;
+  }
+
   /* Custom scrollbar for a cleaner look on desktop */
   @media (min-width: 768px) {
     ::-webkit-scrollbar {
@@ -42,12 +46,14 @@
 
   /* Section main title */
   .section-title {
-    @apply mb-8 text-center text-2xl font-semibold uppercase tracking-wide text-neutral-800 md:text-3xl;
+    /* @apply mb-8 text-center text-2xl font-semibold uppercase tracking-wide text-neutral-800 md:text-3xl; */
+    @apply mb-10 text-3xl text-center font-semibold text-navy md:text-4xl;
   }
 
   /* Vertical divider between sections (kept from original design) */
   .divider {
-    @apply mx-auto my-10 h-24 w-0.5 bg-navy;
+    /* @apply mx-auto my-10 h-24 w-0.5 bg-navy; */
+    @apply mx-auto my-16 h-16 w-px bg-navy;
   }
 
   /* Tag pill used in cards and detail page */

@@ -55,7 +55,7 @@ export default function ProjectsSection() {
   }, [filteredProjects]);
 
   return (
-    <section id="projets" className="bg-surface-bg py-16">
+    <section id="projets" className="mx-auto max-w-6xl px-4 py-16">
       <h2 className="section-title">Mes projets</h2>
 
       <FilterBar
@@ -78,10 +78,10 @@ export default function ProjectsSection() {
 
           return (
             <div key={key} className="mb-14">
-              <h3 className="mb-8 text-center text-xl font-semibold text-navy">
+              <h3 className="mb-8 text-xl text-center font-medium uppercase tracking-wide text-navy-soft">
                 {label}
               </h3>
-              <div className="mx-auto flex max-w-6xl flex-wrap justify-center gap-6 px-4">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                 {items.map((project) => (
                   <ProjectCard key={project.id} project={project} />
                 ))}

@@ -53,10 +53,10 @@ export default function FilterBar({
   return (
     <div
       ref={containerRef}
-      className="relative mx-auto my-10 flex max-w-3xl flex-wrap items-center justify-center gap-3 px-4"
+      className="relative mx-auto mb-12 flex max-w-3xl flex-col gap-3 sm:flex-row"
     >
       {/* Search input with autocomplete */}
-      <div className="relative w-full md:flex-1">
+      <div className="relative flex-1">
         <label htmlFor="filter-search" className="sr-only">
           Rechercher un projet
         </label>
@@ -70,21 +70,21 @@ export default function FilterBar({
           }}
           onFocus={() => setShowSuggestions(true)}
           placeholder="Rechercher un tag ou un mot-clé…"
-          className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-base transition-colors focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy"
+          className="w-full rounded-2xl bg-surface-block px-5 py-3 text-base text-neutral-800 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-navy/30"
           autoComplete="off"
         />
 
         {showSuggestions && suggestions.length > 0 && (
           <ul
             role="listbox"
-            className="absolute left-0 right-0 top-full z-20 mt-1 max-h-72 overflow-y-auto rounded-lg border border-neutral-300 bg-white shadow-lg"
+            className="absolute left-0 right-0 top-full z-20 mt-2 max-h-72 overflow-y-auto rounded-2xl bg-white py-2 shadow-lg ring-1 ring-navy/10"
           >
             {suggestions.map((tag) => (
               <li
                 key={tag}
                 role="option"
                 aria-selected="false"
-                className="cursor-pointer px-4 py-2 transition-colors hover:bg-neutral-100"
+                className="cursor-pointer px-5 py-2 text-neutral-800 transition-colors hover:bg-surface-block"
                 onClick={() => handleSuggestionClick(tag)}
               >
                 {tag}
@@ -95,7 +95,7 @@ export default function FilterBar({
       </div>
 
       {/* Category select */}
-      <div className="w-full md:w-auto">
+      <div className="sm:w-auto">
         <label htmlFor="filter-category" className="sr-only">
           Filtrer par catégorie
         </label>
@@ -103,7 +103,14 @@ export default function FilterBar({
           id="filter-category"
           value={category}
           onChange={(event) => setCategory(event.target.value)}
-          className="w-full rounded-lg border border-neutral-300 bg-white px-4 py-2.5 text-base transition-colors focus:border-navy focus:outline-none focus:ring-1 focus:ring-navy md:w-auto"
+          className="w-full cursor-pointer appearance-none rounded-2xl bg-surface-block px-5 py-3 pr-10 text-base text-neutral-800 focus:outline-none focus:ring-2 focus:ring-navy/30 sm:w-auto"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232f3e5e' stroke-width='2'%3e%3cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7'/%3e%3c/svg%3e\")",
+            backgroundPosition: 'right 0.75rem center',
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '1.25rem',
+          }}
         >
           {categories.map((option) => (
             <option key={option.value} value={option.value}>

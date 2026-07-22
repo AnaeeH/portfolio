@@ -20,10 +20,25 @@ export default function Skills() {
             <ul className="list-disc space-y-1 pl-5 text-neutral-800">
               {block.items.map((item) => (
                 <li
-                  key={item}
-                  className="cursor-default rounded px-1 transition-transform duration-200 hover:translate-x-1"
+                  key={item.name}
+                  className="rounded px-1 leading-tight transition-transform duration-200 hover:translate-x-1"
                 >
-                  {item}
+                  {item.url ? (
+                    <a href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-navy hover:underline"
+                    >
+                      {item.name}
+                    </a>
+                  ) : (
+                    <span>{item.name}</span>
+                  )}
+                  {item.description && (
+                    <div className="mt-0 text-sm italic leading-tight text-neutral-500">
+                      {item.description}
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>

@@ -35,7 +35,7 @@ export default function About() {
             <div className="flex flex-col items-center gap-12 md:flex-row">
                 <div className="w-full md:w-2/5">
                     <img
-                        src={asset('/images/portfolio/langageProgrammation.jpg')}
+                        src={asset('/images/portfolio/LangageProgrammation.jpg')}
                         alt="Illustration de langages de programmation"
                         className="w-full rounded-2xl object-cover"
                     />

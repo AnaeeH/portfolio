@@ -31,7 +31,7 @@ export default function ProjectCard({ project }) {
             className="flex aspect-video w-full items-center justify-center bg-neutral-200 text-neutral-500"
             aria-hidden="true"
           >
-            <span className="text-sm">Aperçu à venir</span>
+            <span className="text-sm">Aperçu indisponible</span>
           </div>
         )}
 

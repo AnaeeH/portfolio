@@ -11,11 +11,51 @@ export const CATEGORIES = {
 export const PROJECTS = [
   // ------------------- IUT PROJECTS -------------------
   {
+    id: 'stage-daltonisme',
+    title: 'Stage - Accessibilité Daltonisme',
+    shortDescription:
+      "Stage de 10 semaines : Adapter un site web pour les daltoniens",
+    image: '/images/portfolio/StageDaltonisme.png',
+    imageAlt: "",
+    tags: ['Stage', 'web', 'HTML / CSS', 'PHP', '2ème année'],
+    category: 'iut',
+    pdfUrl: '/pdf/StageDaltonisme.pdf',
+    role: 'Projet seul',
+    duration: '10 semaines en entreprise',
+    technologies: ['PHP', 'JavaScript', 'CSS / Sass', 'Docker'],
+    context:
+      "En fin de 2ème année, j'ai effectué un stage de 10 semaines au sein d'une petite entreprise de 8 employés." +
+      "\n On m'a confié un ticket, à faire en autonomie, pour adapter leur site (de générations de plannings pour les practiciens de santé) pour les daltoniens.",
+    longDescription:
+      "Lors de ce stage, j'ai dû : " +
+      "\n - Me renseigner sur le daltonisme" +
+      "\n - Comprendre les besoins des utilisateurs daltoniens" +
+      "\n - Réfléchir à des solutions maintenable et évolutive" +
+      "\n - Proposer les solutions envisagées lors de réunions" +
+      "\n - Implémenter les solutions retenues" +
+      "\n\n A la fin de mon stage, 3 solutions étaient implémentées : " + 
+      "\n - Changement de couleurs classiques en CSS pour mieux correspondre aux couleurs visibles pour les daltoniens (similaire à un mode sombre)" + 
+      "\n - Changement des couleurs des images SVG importer avec des balises img" + 
+      "\n - Algorithme de palette shifting pour les couleurs des plannings",
+    technical: [
+      'Découverte de Sass',
+      'Travail sur les couleurs des fichiers SVG', 
+      'Implémentation d\'un algorithme de recuit simulé',
+      'Adaptation à un code existant',
+      'Implémentation de tests unitaires',
+    ],
+    soft: [
+      'Communication',
+      'Autonomie',
+      'Recherche / Etude / Analyse',
+    ],
+  },
+  {
     id: 'competition-robots',
     title: 'Gestion de tournois',
     shortDescription:
       "Conception d'une application wep app en Symfony, incluant la conception de la base de données",
-    image: '/images/portfolio/competitionRobot.png',
+    image: '/images/portfolio/CompetitionRobot.png',
     imageAlt: "Design de l'application",
     tags: ['web', 'PHP', 'SQL', 'Framework', '2ème année'],
     category: 'iut',
@@ -87,7 +127,7 @@ export const PROJECTS = [
     id: 'labyrinthe',
     title: 'Labyrinthe',
     shortDescription:
-      "Conception d'un labyrinthe avec gestion de plusieurs étages et de personnages",
+      "Conception d'un jeu de labyrinthe avec gestion de plusieurs étages et de personnages",
     image: '/images/portfolio/Labyrinthe.png',
     imageAlt: 'Représentation du labyrinthe',
     tags: ['Java', 'UML', 'Markdown', '2ème année'],
@@ -153,7 +193,7 @@ export const PROJECTS = [
     id: 'visualisation-graphe',
     title: 'Visualisation de graphe',
     shortDescription: "Conception d'une interface de visualisation de graphe",
-    image: '/images/portfolio/graphe.png',
+    image: '/images/portfolio/Graphe.png',
     imageAlt: "Interface de visualisation de graphe réalisée en projet d'IUT",
     tags: ['Java', 'UML', '1ère année'],
     category: 'iut',
@@ -219,7 +259,7 @@ export const PROJECTS = [
     id: 'fibro-sphere',
     title: 'FibroSphère — Site Web',
     shortDescription: "Création d'un site web sur le thème de la santé et bien-être",
-    image: '/images/portfolio/siteWeb.png',
+    image: '/images/portfolio/SiteWeb.png',
     imageAlt: 'Design du site Web FibroSphère sur le thème de la santé',
     tags: ['HTML / CSS', 'web', '1ère année'],
     category: 'iut',
@@ -286,7 +326,7 @@ export const PROJECTS = [
     id: 'hackathon-s2',
     title: 'Hackathon S2 — Détecteur de fumée',
     shortDescription: "Conception d'un boîtier détecteur de fumée",
-    image: '/images/portfolio/hackathon_s2.jpg',
+    image: '/images/portfolio/Hackathon_s2.jpg',
     imageAlt: 'Aperçu du boîtier permettant de détecter la fumée de cigarette',
     tags: ['Arduino', 'Automatisation', 'Capteur', '1ère année'],
     category: 'hackathon',
@@ -317,7 +357,7 @@ export const PROJECTS = [
     id: 'hackathon-s1',
     title: 'Hackathon S1 — Main robotisée',
     shortDescription: "Conception d'une main robotisée",
-    image: '/images/portfolio/mainRobotisée.jpg',
+    image: '/images/portfolio/Hackathon_s1.jpg',
     imageAlt: 'Résultat de la main robotisée finale',
     tags: ['Arduino', '3D', 'Capteur', '1ère année'],
     category: 'hackathon',
@@ -351,7 +391,7 @@ export const PROJECTS = [
     id: 'woofing-angleterre',
     title: 'Woofing — Angleterre',
     shortDescription: "Découverte de l'agriculture paysanne et durable",
-    image: '/images/portfolio/woofing_angleterre.jpg',
+    image: '/images/portfolio/WoofingAngleterre.jpg',
     imageAlt: "Photo de la ferme d'accueil lors du Woofing en Angleterre",
     tags: ['Anglais', 'Écologie'],
     category: 'personnel',

@@ -7,10 +7,11 @@ import FilterBar from './FilterBar';
 // Extend this list to add new filters.
 const FILTER_OPTIONS = [
   { value: 'all', label: 'Tous les projets' },
+  { value: 'Stage', label: 'Stage' },
   { value: '1ère année', label: '1ère année' },
   { value: '2ème année', label: '2ème année' },
   { value: '3ème année', label: '3ème année' },
-   { value: 'web', label: 'web' },
+  { value: 'web', label: 'web' },
   { value: 'Java', label: 'Java' },
   { value: 'PHP', label: 'PHP' },
   { value: 'C#', label: 'C#' },

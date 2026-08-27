@@ -89,9 +89,26 @@ export default function ProjectPage() {
 
       <section className="mb-8">
         <h2 className="mb-3 text-xl font-semibold text-navy">Description</h2>
-        <p className="whitespace-pre-line leading-relaxed text-neutral-800">
-          {project.longDescription}
-        </p>
+        {project.longDescription.map((block, idx) => (
+          <div key={idx} className="mb-6 last:mb-0">
+            {
+              block.intro && (
+                <p className="whitespace-pre-line leading-relaxed text-neutral-800">
+                  {block.intro}
+                </p>
+              )
+            }
+            {
+              block.list && block.list.length > 0 && (
+                <ul className="list-disc space-y-1 pl-6 leading-relaxed text-neutral-800">
+                  {block.list.map((item, itemIdx) => (
+                    <li key={itemIdx}>{item}</li>
+                  ))}
+                </ul>
+              )
+            }
+          </div>
+        ))}
       </section>
 
       <dl className="mb-10 grid gap-4 p-6 sm:grid-cols-2">
@@ -99,7 +116,7 @@ export default function ProjectPage() {
           {project.technical && project.technical.length > 0 && (
             <section className="mb-8">
               <h2 className="mb-3 text-xl font-semibold text-navy">Compétences techniques</h2>
-              <ul className="list-disc space-y-2 pl-6 leading-relaxed text-neutral-800">
+              <ul className="list-disc space-y-1 pl-6 leading-relaxed text-neutral-800">
                 {project.technical.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
@@ -111,7 +128,7 @@ export default function ProjectPage() {
           {project.soft && project.soft.length > 0 && (
             <section className="mb-8">
               <h2 className="mb-3 text-xl font-semibold text-navy">Autres compétences</h2>
-              <ul className="list-disc space-y-2 pl-6 leading-relaxed text-neutral-800">
+              <ul className="list-disc space-y-1 pl-6 leading-relaxed text-neutral-800">
                 {project.soft.map((item, idx) => (
                   <li key={idx}>{item}</li>
                 ))}
@@ -144,7 +161,7 @@ export default function ProjectPage() {
             rel="noopener noreferrer"
             className="btn-outline"
           >
-            Ouvrir dans un nouvel onglet
+            Ouvrir le PDF
           </a>
         </div>
       )}

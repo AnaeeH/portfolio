@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { asset } from '../utils/asset';
+import { useState } from 'react';
 
 const YEAR_TAG_REGEX = /^\d+(er|ère|ème|e)?\s+année$/i;
 
@@ -7,6 +8,7 @@ const YEAR_TAG_REGEX = /^\d+(er|ère|ème|e)?\s+année$/i;
  * Clickable project card. Clicking navigates to /projets/:id (no more direct PDF popup).
  */
 export default function ProjectCard({ project }) {
+  const [imageError, setImageError] = useState(false);
   const yearTag = project.tags.find((tag) => YEAR_TAG_REGEX.test(tag));
   const otherTags = project.tags.filter((tag) => !YEAR_TAG_REGEX.test(tag));
 
@@ -17,21 +19,23 @@ export default function ProjectCard({ project }) {
       aria-label={`Voir le projet ${project.title}`}
     >
       <div className="relative">
-        {project.image ? (
+        {project.image && !imageError ? (
           <div className="aspect-video w-full overflow-hidden">
             <img
               src={asset(project.image)}
               alt={project.imageAlt || project.title}
+              onError={() => setImageError(true)}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
             />
           </div>
         ) : (
           <div
-            className="flex aspect-video w-full items-center justify-center bg-neutral-200 text-neutral-500"
+            className="flex flex-col aspect-video w-full items-center justify-center bg-neutral-200 text-neutral-500"
             aria-hidden="true"
           >
-            <span className="text-sm">Aperçu indisponible</span>
+            <span className="text-sm"> { project.imageAlt } </span>
+            <span className="text-sm"> Aperçu indisponible </span>
           </div>
         )}
 

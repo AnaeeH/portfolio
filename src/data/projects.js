@@ -17,7 +17,7 @@ export const PROJECTS = [
       "Stage de 10 semaines : Adapter un site web pour les daltoniens",
     image: '/images/portfolio/StageDaltonisme.png',
     imageAlt: "",
-    tags: ['Stage', 'web', 'HTML / CSS', 'PHP', '2ème année'],
+    tags: ['Stage', 'Web', 'HTML / CSS', 'PHP', '2ème année'],
     category: 'iut',
     pdfUrl: '/pdf/StageDaltonisme.pdf',
     role: 'Projet seul',
@@ -26,20 +26,30 @@ export const PROJECTS = [
     context:
       "En fin de 2ème année, j'ai effectué un stage de 10 semaines au sein d'une petite entreprise de 8 employés." +
       "\n On m'a confié un ticket, à faire en autonomie, pour adapter leur site (de générations de plannings pour les practiciens de santé) pour les daltoniens.",
-    longDescription:
-      "Lors de ce stage, j'ai dû : " +
-      "\n - Me renseigner sur le daltonisme" +
-      "\n - Comprendre les besoins des utilisateurs daltoniens" +
-      "\n - Réfléchir à des solutions maintenable et évolutive" +
-      "\n - Proposer les solutions envisagées lors de réunions" +
-      "\n - Implémenter les solutions retenues" +
-      "\n\n A la fin de mon stage, 3 solutions étaient implémentées : " + 
-      "\n - Changement de couleurs classiques en CSS pour mieux correspondre aux couleurs visibles pour les daltoniens (similaire à un mode sombre)" + 
-      "\n - Changement des couleurs des images SVG importer avec des balises img" + 
-      "\n - Algorithme de palette shifting pour les couleurs des plannings",
+    longDescription: [
+      {
+        intro: "Lors de ce stage, j'ai dû : ",
+        list: [
+          "Me renseigner sur le daltonisme",
+          "Comprendre les besoins des utilisateurs daltoniens",
+          "Réfléchir à des solutions maintenable et évolutive",
+          "Proposer les solutions envisagées lors de réunions",
+          "Me renseigner sur le daltonisme",
+        ]
+      },
+      {
+        intro: "A la fin de mon stage, 3 solutions étaient implémentées :",
+        list: [
+          "Changement de couleurs classiques en CSS pour mieux correspondre aux couleurs visibles pour les daltoniens (similaire à un mode sombre)",
+          "Changement des couleurs des images SVG importer avec des balises img",
+          "Algorithme de palette shifting pour les couleurs des plannings",
+
+        ]
+      }
+    ],
     technical: [
       'Découverte de Sass',
-      'Travail sur les couleurs des fichiers SVG', 
+      'Travail sur les couleurs des fichiers SVG',
       'Implémentation d\'un algorithme de recuit simulé',
       'Adaptation à un code existant',
       'Implémentation de tests unitaires',
@@ -57,7 +67,7 @@ export const PROJECTS = [
       "Conception d'une application wep app en Symfony, incluant la conception de la base de données",
     image: '/images/portfolio/CompetitionRobot.png',
     imageAlt: "Design de l'application",
-    tags: ['web', 'PHP', 'SQL', 'Framework', '2ème année'],
+    tags: ['Web', 'PHP', 'SQL', 'Framework', '2ème année'],
     category: 'iut',
     pdfUrl: '/pdf/CompetitionRobot.pdf',
     role: 'Projet en groupe de 6' +
@@ -67,11 +77,16 @@ export const PROJECTS = [
     context:
       'Conception d\'une application pour organiser des compétitions de robot.' +
       '\nCe projet avait lieu en fin de semestre de la 2ème année, pour nous permettre de faire une application de bout en bout.',
-    longDescription:
-      'Une application responsive capable de :' +
-      '\n - Organiser des compétitions en mode championnat ou en mode tournoi' +
-      '\n - Voir le classement et les rencontres d’une compétiton' +
-      '\n - Gérer les différents profils : utilisateurs et les organisateurs',
+    longDescription: [
+      {
+        intro: "Une application responsive capable de :",
+        list: [
+          "Organiser des compétitions en mode championnat ou en mode tournoi",
+          "Voir le classement et les rencontres d’une compétiton",
+          "Gérer les différents profils : utilisateurs et les organisateurs",
+        ]
+      }
+    ],
     technical: [
       'Conception et liaison de la base de données',
       'Développement des fonctionnalités demandées, au fil des itérations',
@@ -100,18 +115,27 @@ export const PROJECTS = [
     technologies: ['BPMN', 'UML de classes', 'Rédaction'],
     context:
       'Prototypage d’une application en UML, permettant de gérer des dépôts de stockage et d’approvisionnement et répondant au cahier des charges.',
-    longDescription:
-      'Un dossier de GESTION comprenant : ' +
-      '\n - Des fiches personas' +
-      '\n - Des parcours clients' +
-      '\n - Des processus BPMN' +
-      '\n - Des maquettes de l\'application' +
-      '\n\nUn dossier de CONCEPTION comprenant : ' +
-      '\n - Un diagramme de contexte statique' +
-      '\n - Des diagrammes de cas d’utilisations' +
-      '\n - Des diagrammes de classe' +
-      '\n - Des liste d’évènements' +
-      '\n - Des liste de scénarios',
+    longDescription: [
+      {
+        intro: "Un dossier de GESTION comprenant :",
+        list: [
+          "Des fiches personas",
+          "Des parcours clients",
+          "Des processus BPMN",
+          "Des maquettes de l'application",
+        ]
+      },
+      {
+        intro: "Un dossier de CONCEPTION comprenant :",
+        list: [
+          "Un diagramme de contexte statique",
+          "Des diagrammes de cas d’utilisations",
+          "Des diagrammes de classe",
+          "Des liste d’évènements",
+          "Des liste de scénarios",
+        ]
+      }
+    ],
     technical: [
       'Modélisation des processus avec le BPMN',
       'Analyse du fonctionnement de l’application',
@@ -139,11 +163,16 @@ export const PROJECTS = [
     context:
       'Conception d’un labyrinthe avec gestion de plusieurs étages et de personnages.' +
       '\nUne base de code était fournie par l\'iut, et des interfaces étaient imposées.',
-    longDescription:
-      'Un labyrinthe contenant : ' +
-      '\n - Des monstres qui se déplacent aléatoirement et de manière fluide' +
-      '\n - Un personnage qui peut se déplacer à l’aide des touches du clavier et qui ne voit que les cases proches de lui' +
-      '\n - Des déplacements possibles entre différents étages',
+    longDescription: [
+      {
+        intro: "Un labyrinthe contenant : ",
+        list: [
+          "Des monstres qui se déplacent aléatoirement et de manière fluide",
+          "Un personnage qui peut se déplacer à l’aide des touches du clavier et qui ne voit que les cases proches de lui",
+          "Des déplacements possibles entre différents étages",
+        ]
+      }
+    ],
     technical: [
       'Développement Java avec une interface graphique',
       'Gestion du polymorphisme : Personnage et monstres',
@@ -164,7 +193,7 @@ export const PROJECTS = [
     imageAlt: '',
     tags: ['C#', 'Python', 'SQL', '1ère année'],
     category: 'iut',
-    pdfUrl: '/pdf/SAE_Finale.pdf',
+    pdfUrl: '/pdf/SAEFinale.pdf',
     role: 'Projet en groupe de 5' +
       '\nMon rôle : concevoir l\'interface',
     duration: '2 semaines entièrement dédiées au projet',
@@ -172,11 +201,16 @@ export const PROJECTS = [
     context:
       'Conception d\'une application complète de génération de graphique à partir de fichier CSV.' +
       '\n Développement la base de données, des algorithmes de création des graphiques, ainsi que l’interface utilisateur.',
-    longDescription:
-      'Une application capable de : ' +
-      '\n - Générer plusieurs types de graphiques' +
-      '\n - Importer de nouveaux fichiers CSV pour alimenter la base de données' +
-      '\n - Ajouter des tags aux donnée',
+    longDescription: [
+      {
+        intro: "Une application capable de : ",
+        list: [
+          "Générer plusieurs types de graphiques",
+          "Importer de nouveaux fichiers CSV pour alimenter la base de données",
+          "Ajouter des tags aux données",
+        ]
+      }
+    ],
     technical: [
       'Gestion du projet',
       'Conception de l’interface humain - machine (IHM)',
@@ -205,9 +239,16 @@ export const PROJECTS = [
       'Conception d\'une interface de visualisation de graphique, grâce à l\'implémentation de classes de modélisation.' +
       '\nDéveloppement de deux algorithmes modifiant les graphes.' +
       '\nUne base de code était fournie par l\'iut.',
-    longDescription:
-      'Visualisation du graphe fonctionnelle' +
-      '\nPossibilité de modifier les graphes avec les algorithmes développés',
+    longDescription: [
+      {
+        list: [
+          "Visualisation du graphe fonctionnelle",
+          "Possibilité de modifier les graphes avec les algorithmes développés",
+        ]
+
+      }
+    ],
+
     technical: [
       'Programmation en java',
       'Diagramme UML',
@@ -235,14 +276,14 @@ export const PROJECTS = [
     technologies: ['Visual Studio', 'C#', 'Gitlab'],
     context:
       'Une application de jeu fonctionnelle nous était donnée. Le but était d\'améliorer l\'interface et d\'ajouter des fonctionnalités au jeu.' +
-      '\n Les fonctionnalités à implémenter était découpés 3 :' +
-      '\n - Principales' +
-      '\n - Secondaires' +
-      '\n - Refontes graphiques' +
-      '\nUne base de code était fournie par l\'iut.',
-    longDescription:
-      'Fonctionnalités principales implémentées avec succès.' +
-      '\nAmélioration de l\'interface utilisateur (refonte graphique).',
+      '\n Les fonctionnalités à implémenter était découpés 3 : principales, secondaires et refontes graphiques.' +
+      '\n Une base de code était fournie par l\'iut.',
+    longDescription: [
+      {
+        intro: "Fonctionnalités principales implémentées avec succès." +
+          "\nAmélioration de l'interface utilisateur (refonte graphique).",
+      }
+    ],
     technical: [
       'Programmation en C#',
       '1ère utilisation de git en groupe avec des branches',
@@ -261,7 +302,7 @@ export const PROJECTS = [
     shortDescription: "Création d'un site web sur le thème de la santé et bien-être",
     image: '/images/portfolio/SiteWeb.png',
     imageAlt: 'Design du site Web FibroSphère sur le thème de la santé',
-    tags: ['HTML / CSS', 'web', '1ère année'],
+    tags: ['HTML / CSS', 'Web', '1ère année'],
     category: 'iut',
     pdfUrl: '/pdf/FibroSphere.pdf',
     role: 'Projet seul',
@@ -271,13 +312,18 @@ export const PROJECTS = [
       'Conception d\'un site web sur le thème de la santé et du bien-être avec aucune compétence en Javascript, ni aucun framework.' +
       '\n Le site est donc fait avec seulement des connaissances élémentaires en HTML et CSS.' +
       '\n Ce projet correspond à l\'un de nos premiers réalisés à l\'IUT.',
-    longDescription:
-      'Un site web, pour une association fictive, donnant accès à 5 pages : ' +
-      '\n - page d\'accueil' +
-      '\n - page de description plus précises des actions de l\'association' +
-      '\n - page contenant un formulaire (purement du front-end)' +
-      '\n - page "coming soon"' +
-      '\n - page de mentions légales',
+    longDescription: [
+      {
+        intro: "Un site web, pour une association fictive, donnant accès à 5 pages : ",
+        list: [
+          "Page d\'accueil",
+          "Page de description plus précises des actions de l\'association",
+          "Page contenant un formulaire (purement du front-end)",
+          'Page "coming soon"',
+          "Page de mentions légales",
+        ]
+      }
+    ],
     technical: [
       'Maitrise de base du HTML /CSS',
       'Intégration d’un site web fidèle à la maquette',
@@ -303,11 +349,14 @@ export const PROJECTS = [
     duration: '4 semaines',
     technologies: ['NetBeans', 'Java', 'Gitlab'],
     context:
-      'Une base de code était fournie par l\'iut. Le jeu était fonctionnel mais peu intéressant. Le but était donc d\'ajouter des foncitionnalités.' +
-      '\nOn ne pouvait pas passer à la fonctionnalité suivante, tant que la fonctionnalité n\'avait pas été validée. Les fonctionnalités / niveaux à ajouter était de plus en plus complexe à réaliser.',
-    longDescription:
-      'Jeu avec 11 niveaux fonctionnelles sur les 14 demandées.' +
-      '\nRespect des mécaniques prévues pour chaque niveau.',
+      'Une base de code était fournie par l\'iut. Le jeu était fonctionnel mais peu intéressant. \nLe but était donc d\'ajouter des foncitionnalités.' +
+      '\nOn ne pouvait pas passer à la fonctionnalité suivante, tant que la fonctionnalité n\'avait pas été validée. \nLes fonctionnalités / niveaux à ajouter était de plus en plus complexe à réaliser.',
+    longDescription: [
+      {
+        intro: "Jeu avec 11 niveaux fonctionnelles sur les 14 demandées." +
+          "\nRespect des mécaniques prévues pour chaque niveau. ",
+      }
+    ],
     technical: [
       'Manipulation avancée des classes Java',
       'Gestion de tableaux de plateau 2D',
@@ -320,6 +369,10 @@ export const PROJECTS = [
       'Séparation les objectifs en petites fonctions avec des tests indépendants pour mieux atteindre l\'objectif final',
     ],
   },
+
+
+
+
 
   // ------------------- HACKATHONS -------------------
   {
@@ -336,11 +389,16 @@ export const PROJECTS = [
     technologies: ['Arduino', 'TIA Portal', 'Capteurs'],
     context:
       'Conception d\'un boîtier contenant des capteurs permettant de détecter la présence nocive de fumée de cigarette.',
-    longDescription:
-      'Boîtier fonctionnel capable de mesurer : ' +
-      '\n - la température avec le capteur MKR ENV Shield R2' +
-      '\n - le monoxyde de carbone (CO) et les composés organiques volatiles (COV) avec le capteur Grove Multichannel Gas Sensor' +
-      '\n - les particules fines avec le capteur Grove - Laser PM2.5 Sensor (HM3301)',
+    longDescription: [
+      {
+        intro: "Boîtier fonctionnel capable de mesurer : ",
+        list: [
+          "La température : capteur MKR ENV Shield R2",
+          "Le monoxyde de carbone (CO) et les composés organiques volatiles (COV) : capteur Grove Multichannel Gas Sensor",
+          "Les particules fines : capteur Grove - Laser PM2.5 Sensor (HM3301)",
+        ]
+      }
+    ],
     technical: [
       'Maîtrise des librairies Arduino',
       'Exploitation de datasheet',
@@ -371,8 +429,11 @@ export const PROJECTS = [
       'Ce projet était un projet réalisé au sein du DU "Technologies aux service de la santé", dans lequel des étudiants de différents départements de l\'IUT travaillent ensemble (GEII, Mesures Physique, Informatique,...).' +
       ' Ce projet était réalisé avec des étudiants du DU "Robotique".' +
       '\n Les étudiants de robotique s\'occupait de faire fonctionner la main avec un joystick, et nous de récupérer les données des capteurs placés sur notre main. Lors d\'un hackathon, nous avons ensuite dû combiner les projets pour utiliser les signaux des capteurs de la main afin de faire bouger la main mécanique sans le joystick.',
-    longDescription:
-      'Création d’une main robotisée fonctionnelle dont la moitié des doigts réagissent aux mouvements du gant, grâce à l\'exploitation de capteurs de flexion.',
+    longDescription: [
+      {
+        intro: "Création d’une main robotisée fonctionnelle dont la moitié des doigts réagissent aux mouvements du gant, grâce à l'exploitation de capteurs de flexion.",
+      }
+    ],
     technical: [
       'Programmation en C++',
       'Apprentissage de la modélisation 3D',
@@ -386,7 +447,60 @@ export const PROJECTS = [
     ],
   },
 
+
+
+
+
   // ------------------- PERSONAL PROJECTS -------------------
+  {
+    id: 'learning-guitar',
+    title: 'Application mobile de guitare',
+    shortDescription: "Conception d'une application mobile fonctionnelle et utilisable en tout temps sur un téléphone Android",
+    image: '/images/portfolio/LearningGuitar.png',
+    imageAlt: "Interface de l'application mobile",
+    tags: ['Android', 'Appli', 'API', 'Java', 'SQL', '2ème année'],
+    category: 'personnel',
+    pdfUrl: '/pdf/LearningGuitar.pdf',
+    role: 'Projet seul, avec l\'aide d\'IA',
+    duration: 'Plusieurs mois',
+    technologies: ['Android Studio', 'Java', 'Symfony', 'API Platform', 'SQL', 'Supabase', 'Render'],
+    context:
+      "J'essaie d'apprendre la guitare. Je cherchais une application  me permettrant d'enregistrer tout un répertoire de musique, je ne trouvais pas ce que je voulais avec les applications existantes." +
+      "\n\n Mon idée est donc d'avoir une application contenant : une liste des accords, une liste des gammes et une liste de musique que je pourrais jouer grâce au défilement de leur tablature ou de leur partition.",
+    longDescription: [
+      {
+        intro: 'Application fonctionnelle avec différentes fonctionnalités :',
+        list: [
+          'Ajout de nouvelles musiques',
+          'Gestion des musiques et filtre : like, commentaire, statut, difficultés',
+          'Visionnage de la TABLATURE avec défilement',
+          'Gestion de la vitesse de la musique (BPM et défilement)',
+          'Ajout des accords'
+        ],
+      },
+      {
+        intro: 'Améliorations futures :',
+        list: [
+          'Visionnage de la PARTITION avec défilement',
+          'Gestion des audios',
+          'Ajout de gammes',
+        ],
+      }
+    ],
+    technical: [
+      'Prise en main de API Platform',
+      'Traitement et parsing de fichiers MusicXML vers une structure en base de données',
+      'Développement mobile Android',
+      'Gestion d’une base de données distante (Supabase)',
+      'Déploiement et hébergement d’une API (Render)',
+      'Travail avec un projet full-stack complet',
+    ],
+    soft: [
+      'Autonomie : apprentissage de nouveaux outils et technologies',
+      'Organisation : découpage du projet en étapes claires pour obtenir des résultats intermédiaires réguliers',
+      'Capacité à revenir sur des fonctionnalités déjà développées pour intégrer de nouvelles fonctionnalités',
+    ],
+  },
   {
     id: 'woofing-angleterre',
     title: 'Woofing — Angleterre',
@@ -395,16 +509,19 @@ export const PROJECTS = [
     imageAlt: "Photo de la ferme d'accueil lors du Woofing en Angleterre",
     tags: ['Anglais', 'Écologie'],
     category: 'personnel',
-    pdfUrl: '/pdf/Woofing_Angleterre.pdf',
+    pdfUrl: '/pdf/WoofingAngleterre.pdf',
     role: 'Séjour au sein d\'une communauté d\'environ 10 personnes',
     duration: '10 jours',
     technologies: ['Immersion linguistique', 'Travail collaboratif', 'Pratique'],
     context:
-      'Voyage pour découvrir l’agriculture paysanne et durable tout en améliorant mon anglais.' + 
-      '\n Le but de ce voyage était d\'apprendre des pratiques durables et de découvrir la vie en communauté.' + 
+      'Voyage pour découvrir l’agriculture paysanne et durable tout en améliorant mon anglais.' +
+      '\n Le but de ce voyage était d\'apprendre des pratiques durables et de découvrir la vie en communauté.' +
       '\n\n Description du Woofing : similaire au séjour "fille au père", le woofing est un séjour durant lequel on est nourri et logé et où l\'on doit participer aux activités de la famille durant 5 jours dans la semaine. Le Woofing est axé sur l\'agriculture ou les principes écologiques.',
-    longDescription:
-      'Cette expérience m\'a permis d\'entrer dans le milieu de l\'environnement, ce qui accentue ma motivation pour travailler dans une entreprise engagée, dans l\'environnement ou dans d\'autres domaines.',
+    longDescription: [
+      {
+        intro: "Cette expérience m'a permis d'entrer dans le milieu de l'environnement, ce qui accentue ma motivation pour travailler dans une entreprise engagée, dans l'environnement ou dans d'autres domaines.",
+      }
+    ],
     technical: [
       'Initiation aux principes de la permaculture',
       'Gestion durable d’une petite ferme',

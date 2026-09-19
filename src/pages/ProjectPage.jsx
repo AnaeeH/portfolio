@@ -111,6 +111,32 @@ export default function ProjectPage() {
         ))}
       </section>
 
+      {project.workDistribution && (
+        <section className="mb-8">
+          <h2 className="mb-3 text-xl font-semibold text-navy">Répartition du travail</h2>
+          {project.workDistribution.map((block, idx) => (
+            <div key={idx} className="mb-6 last:mb-0">
+              {
+                block.intro && (
+                  <p className="whitespace-pre-line leading-relaxed text-neutral-800">
+                    {block.intro}
+                  </p>
+                )
+              }
+              {
+                block.list && block.list.length > 0 && (
+                  <ul className="list-disc space-y-1 pl-6 leading-relaxed text-neutral-800">
+                    {block.list.map((item, itemIdx) => (
+                      <li key={itemIdx}>{item}</li>
+                    ))}
+                  </ul>
+                )
+              }
+            </div>
+          ))}
+        </section>
+      )}
+
       <dl className="mb-10 grid gap-4 p-6 sm:grid-cols-2">
         <div>
           {project.technical && project.technical.length > 0 && (

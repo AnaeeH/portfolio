@@ -19,6 +19,7 @@ const FILTER_OPTIONS = [
   { value: 'SQL', label: 'SQL' },
   { value: 'Python', label: 'Python' },
   { value: 'HTML / CSS', label: 'HTML / CSS' },
+  { value: 'CI/CD', label: 'CI/CD' },
   { value: 'Arduino', label: 'Arduino' },
   { value: 'Framework', label: 'Framework' },
 ];

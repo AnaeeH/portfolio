@@ -10,6 +10,79 @@ export const CATEGORIES = {
 
 export const PROJECTS = [
   // ------------------- IUT PROJECTS -------------------
+    {
+    id: 'concordia',
+    title: 'Jeu de plateau Concordia',
+    shortDescription:
+      "Adaptation du jeu de plateau stratégique Concordia en jeu vidéo",
+    image: '/images/portfolio/Concordia.png',
+    imageAlt: "Design du jeu",
+    tags: ['Python', 'CI/CD', 'SQL', '3ème année'],
+    category: 'iut',
+    pdfUrl: '/pdf/Concordia.pdf',
+    role: 'Projet en groupe de 7',
+    duration: '2 semaines entièrement dédiées au projet',
+    technologies: ['Python', 'SQL', 'Gitlab', 'CI/CD', 'Jira'],
+    context:
+      "Nous devions adapter le jeu de plateau Concordia en application Python,, en ayant accès à une base de données créé par l'IUT." +
+      "\n\nRécupération des règles dans une base de données." +
+      "\nDéveloppement des mécaniques de gameplay, de l’interface et des IA." +
+      "\nMise en place d’une architecture MVC."+
+      "\nTests unitaires et débogage.",
+    longDescription: [
+      {
+        intro: "Un jeu entièrement fonctionnel, respectant les règles du jeu Concordia, avec : ",
+        list: [
+          "Une interface lisible",
+          "Des IA fonctionnelles",
+          "Un mode autoplay pour observer des parties sans intervention humaine (utile pour le débogage)",
+          "Une base de données permettant de configurer une grande partie des éléments du jeu, si la base de données change, le jeu s’adapte directement sans avoir à modifier le code",
+        ]
+      },
+       {
+        intro: "Ajouts possibles :",
+        list: [
+          "Parties sauvegardable, reprise d'une partie en cours",
+          "Musiques et sons d'ambiance",
+          "Modification de la base de données pour intégrer les actions des cartes jouables dans la BD afin de pouvoir modifier une carte sans avoir à faire évoluer le code",
+        ]
+      }
+    ],
+    workDistribution: [
+      {
+        intro: "Organisation de l'équipe :",
+        list: [
+          "1 scrum master : chargé de l’organisation et du suivi de l’équipe, ainsi que des livrables de gestion de projet",
+          "1 Tech lead : chargé de l’architecture, de l’intégration et des merge requests",
+          "1 Chef de projet / développeur : chargé de la cohérence technique et du suivi de développement",
+          "4 développeurs, dont je faisais partie",
+        ]
+      },
+      {
+        intro: "Ma contribution :",
+        list: [
+          "Développement de mes fonctionnalités assignées (actions des cartes à jouer)",
+          "Vérification et débogage du jeu",
+          "Identification et correction des mécaniques incomplètes ou incorrectes dans le code des autres membres de l'équipe",
+          "Utilisation du mode autoplay pour rechercher et corriger les bugs lors du déroulement d’une partie",
+        ]
+      }
+    ],
+    technical: [
+      'Programmation orientée objet en Python',
+      'Conception de diagrammes de séquences et de classes',
+      'Architecture MVC',
+      'Exploitation d’une BD existante',
+      'Débogage et vérification des mécaniques de jeu',
+      'Intégration continue et gestion des merge requests',
+    ],
+    soft: [
+      'Méthode Agile',
+      'Gestion de projet et suivi des tâches avec Jira',
+      'Communication en équipe',
+      'Partage de compétences ',
+    ],
+  },
   {
     id: 'stage-daltonisme',
     title: 'Stage - Accessibilité Daltonisme',

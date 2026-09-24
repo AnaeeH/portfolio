@@ -12,8 +12,8 @@ export default function App() {
       <Header />
       <main className="flex-1 pt-16">
         <Routes>
-          <Route path={asset('/')} element={<HomePage />} />
-          <Route path={asset('/projets/:projectId')} element={<ProjectPage />} />
+         <Route path="/" element={<HomePage />} />
+          <Route path="/projets/:projectId" element={<ProjectPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>

@@ -1,29 +1,5 @@
-{/* 
-<header>
-  <div><a href="index.html">
-    <h1>Anaée Herbillon </h1>
-  </a>
-
-  </div>
-
-  <label for="toggle">☰</label>
-  <input type="checkbox" id="toggle">
-
-    <nav id="menu" role="navigation">
-      <ul>
-        <li><a href="index.html#presentation">Qui-suis-je ?</a></li>
-        <li><a href="index.html#projets">Mes projets</a> </li>
-        <li><a href="index.html#competences">Mes compétences</a> </li>
-        <li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=a.herbillon33@gmail.com"
-          target="_blank" id="contact">Contactez-moi</a></li>
-      </ul>
-    </nav>
-</header> 
-*/}
-
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { asset } from '../utils/asset';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const NAV_LINKS = [
   { label: 'Qui suis-je ?', anchor: 'presentation' },
@@ -38,6 +14,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
+  const navigate = useNavigate();
 
   // Close the mobile menu whenever the route changes
   useEffect(() => {
@@ -47,13 +24,28 @@ export default function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   // Build the correct href for anchor links depending on the current route
-  const buildAnchorHref = (anchor) => (isHome ? `#${anchor}` : `/#${anchor}`);
+  const handleAnchorClick = (event, anchor) => {
+    event.preventDefault();
+    closeMenu();
+
+    if (isHome) {
+      // Already on the homepage: scroll directly to the target section
+      const element = document.getElementById(anchor);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    } else {
+      // Coming from another page: navigate to home first, then HomePage's useEffect
+      // will scroll to the target section based on location.state.scrollTo
+      navigate('/', { state: { scrollTo: anchor } });
+    }
+  };
 
   return (
     <header className="fixed top-0 z-50 w-full bg-surface-bg shadow-header">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
         <Link
-          to={asset('/')}
+          to="/"
           onClick={closeMenu}
           className="transition-colors hover:text-navy"
           aria-label="Accueil"
@@ -85,7 +77,8 @@ export default function Header() {
             {NAV_LINKS.map((link) => (
               <li key={link.anchor}>
                 <a
-                  href={buildAnchorHref(link.anchor)}
+                  href={`#${link.anchor}`}
+                  onClick={(event) => handleAnchorClick(event, link.anchor)}
                   className="text-base transition-colors hover:font-semibold hover:text-navy"
                 >
                   {link.label}
@@ -117,8 +110,8 @@ export default function Header() {
           {NAV_LINKS.map((link) => (
             <li key={link.anchor}>
               <a
-                href={buildAnchorHref(link.anchor)}
-                onClick={closeMenu}
+                href={`#${link.anchor}`}
+                onClick={(event) => handleAnchorClick(event, link.anchor)}
                 className="block py-2 text-center transition-colors hover:font-semibold hover:text-navy"
               >
                 {link.label}

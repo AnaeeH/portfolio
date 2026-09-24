@@ -43,7 +43,7 @@ export default function About() {
 
                 <div className="w-full text-justify md:w-3/5">
                     <p className="mb-4 leading-relaxed text-neutral-800">
-                        Étudiante en <Highlight>IUT informatique</Highlight> à Bordeaux, actuellement en 2ème année.
+                        Étudiante en <Highlight>IUT informatique</Highlight> à Bordeaux, actuellement en 3ème année.
                     </p>
                     <p className="mb-4 leading-relaxed text-neutral-800">
                         Je souhaite mettre mes compétences en informatique au service des causes qui ont

@@ -1,9 +1,9 @@
 # Hébergement
 
-Site hébergé sur Github : [Anaée HERBILLON](https://anaeeh.github.io/portfolio/projets/gestion-depots)
+Site hébergé sur Github : [Anaée HERBILLON](https://anaeeh.github.io/portfolio/)
 
 # Lancement du site en mode développement
 
-npm install
-npm run dev
+- npm install
+- npm run dev
 

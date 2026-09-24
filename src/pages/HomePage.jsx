@@ -9,23 +9,22 @@ export default function HomePage() {
   const location = useLocation();
 
   useEffect(() => {
-    if (location.hash) {
-      const id = location.hash.slice(1);
-      const element = document.getElementById(id);
-      if (element) {
-        setTimeout(() => {
+    if (location.state?.scrollTo) {
+      setTimeout(() => {
+        const element = document.getElementById(location.state.scrollTo);
+        if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 50);
-      }
+        }
+      }, 100);
     }
   }, [location]);
 
   return (
     <>
-       <section id="presentation">
+      <section id="presentation">
         <div
           className="h-72 w-full bg-cover bg-center md:h-96"
-          style={{   backgroundImage: `url(${asset('/images/pageAccueil/banniereLinkedin.png')})`, }}
+          style={{ backgroundImage: `url(${asset('/images/pageAccueil/banniereLinkedin.png')})`, }}
           role="img"
           aria-label="Bannière personnelle"
         />

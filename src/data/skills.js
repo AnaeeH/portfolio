@@ -2,10 +2,10 @@ export const SKILLS_TECH = [
   {
     title: 'Langages généraux',
     items: [
-      { name: 'Java'},
-      { name: 'C++'},
+      { name: 'Java', description: 'POO et développement Android'},
+      { name: 'Python', description: 'script et POO'},
+      { name: 'C++', description: 'Arduino'},
       { name: 'C#'},
-      { name: 'Python'},
     ],
   },
   {
@@ -13,13 +13,15 @@ export const SKILLS_TECH = [
     items: [
       { name: 'HTML / CSS' },
       { name: 'JavaScript'},
-      { name: 'PHP'},
+      { name: 'PHP', description: 'Backend'},
     ],
   },
   {
     title: 'Bases de données',
     items: [
       { name: 'Modèle relationnel' },
+      { name: 'Schéma entités-associations' },
+      { name: 'Méthodes de modélisation' },
       { name: 'SQL'},
       { name: 'Conception de BDD' },
     ],
@@ -27,6 +29,7 @@ export const SKILLS_TECH = [
   {
     title: 'Outils et IDE',
     items: [
+      { name: 'Git'},
       { name: 'Visual Studio Code', description: 'IDE polyvalent' },
       { name: 'Visual Studio', description: 'IDE C# et .NET' },
       { name: 'NetBeans', description: 'IDE Java' },
@@ -45,12 +48,14 @@ export const SKILLS_TECH = [
     ],
   },
   {
-    title: 'Modélisation & tests',
+    title: 'Conception et méthodes',
     items: [
-      { name: 'Diagrammes UML' },
-      { name: 'Schéma entités-associations' },
-      { name: 'Méthodes de modélisation' },
-      { name: 'Conception de jeux de tests' },
+      { name: 'UML', description: 'Diagrammes de classes et de cas d\'utilisation' },
+      { name: 'Architecture', description: 'Model / View / Controller' },
+      { name: 'POO', description: 'Programmation orientée objet' },
+      { name: 'Gestion de projet', description: 'Méthode Agile / Scrum' },
+      { name: 'Intégration continue', description: 'CI / CD, pipelines, jobs' },
+      { name: 'Tests', description: 'unitaires / fonctionnels' },
     ],
   },
 ];

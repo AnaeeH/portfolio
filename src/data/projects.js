@@ -118,8 +118,37 @@ export const PROJECTS = [
     title: 'Stage - Accessibilité Daltonisme',
     shortDescription:
       "Stage de 10 semaines : Adapter un site web pour les daltoniens",
-    image: '/images/portfolio/StageDaltonisme.png',
-    imageAlt: "",
+    images: [
+      {
+        type: 'image',
+        src: '/images/portfolio/stage1/StageDaltonisme.png',
+        alt: 'Daltonisme',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/stage1/StageMaquetteShifting.png',
+        alt: 'Maquette de la solution de palette shifting',
+        caption: 'Maquette de la solution finale choisie : palette shifting',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/stage1/StageMaquettePalette.png',
+        alt: 'Maquette de la solution de palette de couleurs',
+        caption: 'Maquette de la solution de palette de couleurs',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/stage1/StageMaquetteMotifs.png',
+        alt: 'Maquette de la solution des motifs superposés aux couleurs d\'origine',
+        caption: 'Maquette de la solution des motifs superposés aux couleurs d\'origine',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/stage1/StageYoutrack.png',
+        alt: 'Base de connaisssance de l\'entreprise',
+        caption: 'Base de connaisssance de l\'entreprise',
+      },
+    ],
     tags: ['Stage', 'Web', 'HTML / CSS', 'PHP', '2ème année'],
     category: 'iut',
     pdfUrl: '/pdf/StageDaltonisme.pdf',
@@ -135,9 +164,8 @@ export const PROJECTS = [
         list: [
           "Me renseigner sur le daltonisme",
           "Comprendre les besoins des utilisateurs daltoniens",
-          "Réfléchir à des solutions maintenable et évolutive",
+          "Réfléchir à des solutions maintenable et évolutive, ex : palette de couleurs, motifs, palette shifting",
           "Proposer les solutions envisagées lors de réunions",
-          "Me renseigner sur le daltonisme",
         ]
       },
       {

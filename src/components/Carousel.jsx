@@ -20,14 +20,7 @@ export default function Carousel({ images }) {
     return (
         <figure className="mb-10">
             <div className="relative aspect-video overflow-hidden rounded-2xl bg-surface-block">
-                {currentImage.type === 'image' ? (
-                    <img
-                        src={asset(currentImage.src)}
-                        alt={currentImage.alt}
-                        className="h-full w-full object-contain"
-                        loading={currentIndex === 0 ? 'eager' : 'lazy'}
-                    />
-                ) : (
+                {currentImage.type === 'video' ? (
                     <video
                         key={currentImage.src}
                         src={asset(currentImage.src)}
@@ -40,6 +33,13 @@ export default function Carousel({ images }) {
                     >
                         Votre navigateur ne supporte pas la lecture de vidéos.
                     </video>
+                ) : (
+                    <img
+                        src={asset(currentImage.src)}
+                        alt={currentImage.alt}
+                        className="h-full w-full object-contain"
+                        loading={currentIndex === 0 ? 'eager' : 'lazy'}
+                    />
                 )}
 
                 {hasMultiple && (

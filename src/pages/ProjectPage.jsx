@@ -60,14 +60,6 @@ export default function ProjectPage() {
         <p className="text-lg text-neutral-700">{project.shortDescription}</p>
       </header>
 
-      {/* {project.image && (
-        <img
-          src={asset(project.image)}
-          alt={project.imageAlt || project.title}
-          className="mb-10 w-full rounded-3xl object-cover shadow-card"
-        />
-      )} */}
-
       {(() => {
         const images = project.images
           ? project.images

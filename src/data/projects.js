@@ -559,6 +559,7 @@ export const PROJECTS = [
     id: 'learning-guitar',
     title: 'Application mobile de guitare',
     shortDescription: "Conception d'une application mobile fonctionnelle et utilisable en tout temps sur un téléphone Android",
+    codeUrl: 'https://github.com/AnaeeH/learningGuitar',
     image: '/images/portfolio/LearningGuitar.png',
     imageAlt: "Interface de l'application mobile",
     tags: ['Android', 'Appli', 'API', 'Java', 'SQL', '2ème année'],

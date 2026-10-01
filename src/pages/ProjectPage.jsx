@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { CATEGORIES, PROJECTS, getProjectById } from '../data/projects';
 import { asset } from '../utils/asset';
+import Carousel from '../components/Carousel';
 
 export default function ProjectPage() {
   const { projectId } = useParams();
@@ -21,8 +22,13 @@ export default function ProjectPage() {
         <p className="mb-8 text-neutral-700">
           Le projet demandé n'existe pas ou a été déplacé.
         </p>
-        <Link to={asset('/#projets')} className="btn-primary">
-          Retour aux projets
+        <Link
+          to="/"
+          state={{ scrollTo: 'projets' }}
+          className="mb-8 inline-flex items-center gap-2 text-navy transition-colors hover:underline"
+        >
+          <span aria-hidden="true">←</span>
+          <span>Retour aux projets</span>
         </Link>
       </div>
     );
@@ -35,14 +41,14 @@ export default function ProjectPage() {
   return (
     <article className="mx-auto max-w-4xl px-4 py-12">
       {/* Back button — uses history when possible, falls back to home */}
-      <button
-        type="button"
-        onClick={() => navigate(-1)}
+      <Link
+        to="/"
+        state={{ scrollTo: 'projets' }}
         className="mb-8 inline-flex items-center gap-2 text-navy transition-colors hover:underline"
       >
         <span aria-hidden="true">←</span>
-        <span>Retour</span>
-      </button>
+        <span>Retour aux projets</span>
+      </Link>
 
       <header className="mb-8">
         <p className="mb-2 text-sm font-medium uppercase tracking-wide text-navy-soft">
@@ -54,13 +60,23 @@ export default function ProjectPage() {
         <p className="text-lg text-neutral-700">{project.shortDescription}</p>
       </header>
 
-      {project.image && (
+      {/* {project.image && (
         <img
           src={asset(project.image)}
           alt={project.imageAlt || project.title}
           className="mb-10 w-full rounded-3xl object-cover shadow-card"
         />
-      )}
+      )} */}
+
+      {(() => {
+        const images = project.images
+          ? project.images
+          : project.image
+            ? [{ src: project.image, alt: project.imageAlt || project.title }]
+            : [];
+
+        return <Carousel images={images} />;
+      })()}
 
       {/* Quick facts panel */}
       <dl className="mb-10 grid gap-4 rounded-2xl bg-surface-block p-6 sm:grid-cols-3">
@@ -194,12 +210,16 @@ export default function ProjectPage() {
 
       {/* Navigation between projects */}
       <nav className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-neutral-300 pt-8 sm:flex-row">
-        <Link to={asset('/#projects')} className="text-navy hover:underline">
-          ← Tous les projets
-        </Link>
+        <button
+          type="button"
+          onClick={() => navigate(-1)}
+          className="text-navy hover:underline"
+        >
+          ← Retour
+        </button>
         {nextProject && (
           <Link
-            to={asset(`/projets/${nextProject.id}`)}
+            to={`/projets/${nextProject.id}`}
             className="text-right text-navy hover:underline"
           >
             Projet suivant : {nextProject.title} →

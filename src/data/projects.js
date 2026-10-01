@@ -10,13 +10,43 @@ export const CATEGORIES = {
 
 export const PROJECTS = [
   // ------------------- IUT PROJECTS -------------------
-    {
+  {
     id: 'concordia',
     title: 'Jeu de plateau Concordia',
     shortDescription:
       "Adaptation du jeu de plateau stratégique Concordia en jeu vidéo",
-    image: '/images/portfolio/Concordia.png',
-    imageAlt: "Design du jeu",
+    images: [
+      {
+        type: 'image',
+        src: '/images/portfolio/concordia/Concordia.png',
+        alt: 'Design du jeu',
+      },
+
+      {
+        type: 'image',
+        src: '/images/portfolio/concordia/ConcordiaUMLClasses.png',
+        alt: 'Extrait du diagramme de classes réalisé pour l\'application',
+        caption: 'Extrait du diagramme de classes',
+      },
+      {
+        type: 'video',
+        src: '/images/portfolio/concordia/ConcordiaVideo.webm',
+        alt: 'Extrait du déroulement du jeu',
+        caption: 'Extrait du déroulement des cartes Architects et Prefect',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/concordia/ConcordiaCycle.png',
+        alt: 'Cycle de développement de l\'application',
+        caption: 'Cycle de développement de l\'application',
+      },
+      {
+        type: 'image',
+        src: '/images/portfolio/concordia/ConcordiaDashboard.png',
+        alt: 'Dashboard lors de notre projet',
+        caption: 'Dashboard git de notre projet',
+      },
+    ],
     tags: ['Python', 'CI/CD', 'SQL', '3ème année'],
     category: 'iut',
     pdfUrl: '/pdf/Concordia.pdf',
@@ -27,7 +57,7 @@ export const PROJECTS = [
       "Nous devions adapter le jeu de plateau Concordia en application Python,, en ayant accès à une base de données créé par l'IUT." +
       "\n\nRécupération des règles dans une base de données." +
       "\nDéveloppement des mécaniques de gameplay, de l’interface et des IA." +
-      "\nMise en place d’une architecture MVC."+
+      "\nMise en place d’une architecture MVC." +
       "\nTests unitaires et débogage.",
     longDescription: [
       {
@@ -39,7 +69,7 @@ export const PROJECTS = [
           "Une base de données permettant de configurer une grande partie des éléments du jeu, si la base de données change, le jeu s’adapte directement sans avoir à modifier le code",
         ]
       },
-       {
+      {
         intro: "Ajouts possibles :",
         list: [
           "Parties sauvegardable, reprise d'une partie en cours",

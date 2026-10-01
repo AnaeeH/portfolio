@@ -14,16 +14,16 @@ export default function ProjectCard({ project }) {
 
   return (
     <Link
-      to={asset(`/projets/${project.id}`)}
+      to={`/projets/${project.id}`}
       className="group flex w-full flex-col overflow-hidden rounded-2xl bg-surface-block transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-navy focus:ring-offset-2"
       aria-label={`Voir le projet ${project.title}`}
     >
       <div className="relative">
-        {project.image && !imageError ? (
+        {(project.image || project.images) && !imageError ? (
           <div className="aspect-video w-full overflow-hidden">
             <img
-              src={asset(project.image)}
-              alt={project.imageAlt || project.title}
+              src={asset(project.images?.[0]?.src || project.image)}
+              alt={project.images?.[0]?.alt || project.imageAlt || project.title}
               onError={() => setImageError(true)}
               className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
               loading="lazy"
